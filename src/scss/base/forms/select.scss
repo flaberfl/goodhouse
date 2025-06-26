@@ -1,0 +1,239 @@
+// <SELECT>
+// Сниппет (HTML): sel
+.select {
+	min-width: 0;
+	position: relative;
+	width: 100%;
+
+	// .select__body
+	&__body {
+		position: relative;
+	}
+
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		// border: 1px solid #666;
+		// background-color: #fff;
+		cursor: pointer;
+		width: 100%;
+		// color: #666;
+		background: $grayBackColor;
+
+
+		@include adaptiveValue("height", 70, 60);
+		@include adaptiveValue("border-radius", 35, 30);
+
+		._select-open & {
+			color: inherit;
+			border-radius: 35px 35px 0 0;
+		}
+
+		._select-open & {}
+
+		._select-open & {
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
+
+			&::after {
+				transform: rotate(40deg);
+			}
+
+			&::before,
+			&::after {
+				background-color: $mainColor;
+			}
+		}
+
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: 18px;
+			top: 50%;
+			background-color: $mainColor;
+			height: 2px;
+			width: 10px;
+			transition: transform 0.5s ease 0s;
+		}
+
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
+
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
+	}
+
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		// height: toRem(50);
+		padding: 0 toRem(20);
+		gap: toRem(10);
+
+		._select-open & {}
+
+
+		>* {
+			flex: 1 1 auto;
+		}
+
+		&:after {
+			content: "";
+			align-self: stretch;
+			flex: 0 0 10px;
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				// opacity: 0.5;
+			}
+		}
+	}
+
+	// .select__content  // ПЛЕЙСХОЛДEР
+	&__content {
+		flex: 1 1 auto;
+		overflow: hidden;
+		// text-overflow: ellipsis;
+		white-space: nowrap;
+
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 150%;
+		// color: $grayColor;
+
+		@media (max-width:$mobile) {
+			font-size: toRem(14);
+		}
+
+		span {
+			display: none;
+		}
+
+		._select-active & {
+			color: $mainColor;
+		}
+	}
+
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+
+		// ._select-open & {
+		// 	border-bottom: 1px solid #ededed;
+		// }
+
+		// &::placeholder {
+		// 	color: red;
+		// }
+	}
+
+	// .select__options
+	&__options {
+		// color: #000;
+		position: absolute;
+		top: calc(100% - toRem(1));
+		// border-radius: 0 0 toRem(26) toRem(26);
+		// box-shadow: 0 9px 54px 0 rgba(0, 0, 0, 0.04);
+		min-width: 100%;
+		left: 0;
+		background-color: $grayBackColor;
+		// border: 1px solid #e2e2e2;
+		border-radius: 0 0 35px 35px;
+
+		border-top: 0;
+		// padding: 10px 0px 5px 0px;
+		// padding-bottom: toRem(12);
+
+	}
+
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: toRem(200);
+
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+
+	// .select__option
+	&__option {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		padding: 10px 20px;
+		color: inherit;
+
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 150%;
+		color: $mainColor;
+
+		@media (max-width:$mobile) {
+			font-size: toRem(14);
+		}
+
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__asset {}
+
+	&__text {}
+
+	&._form-error {
+		border-radius: 35px;
+		border: 1px solid #d42023;
+		color: #d42023;
+	}
+
+	// Состояние селекта
+	&._select-open {}
+
+	&._select-disabled {}
+
+	&._select-active {}
+
+	&._select-focus {}
+
+	&._select-multiple {}
+
+	&._select-checkbox {}
+}

@@ -1,0 +1,214 @@
+//<BUTTONS (a.btn+tab)>
+// Сниппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 0px;
+	border-radius: toRem(50);
+	background-color: #fff;
+
+	&__basket {
+		&:hover {
+			.button-wrapper__null {
+				background: #f0ffff;
+				border: 1px solid rgba(40, 179, 182, 0.13);
+			}
+		}
+
+		&.active {
+			.button-wrapper__null {
+				display: none;
+			}
+
+			.button-wrapper__add {
+				display: flex;
+			}
+		}
+	}
+
+	&__profile {
+		padding-right: toRem(10) !important;
+		padding-left: toRem(10) !important;
+		justify-content: center;
+		height: toRem(57);
+		@include adaptiveValue("width", 318, 283);
+	}
+
+	&__arrow {
+		display: inline-flex;
+		padding: 0 toRem(30);
+
+		font-weight: 700;
+		color: #fff;
+		line-height: 300%;
+		text-transform: uppercase;
+
+		background-color: $secondaryColor;
+		transition: background-color 0.3s;
+
+		@include adaptiveValue("font-size", 21, 17);
+
+		@include adaptiveValue("height", 70, 50);
+		@include adaptiveValue("gap", 66, 34);
+
+		@media (max-width:$mobile) {
+			line-height: 371%;
+			color: #fff;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #000;
+			}
+		}
+	}
+
+	&__to-main {
+		height: toRem(52);
+
+		border: 1px solid var(--secondary-color);
+		background: #fff;
+
+		font-size: toRem(17);
+		font-weight: 600;
+		color: $secondaryColor;
+
+		transition: all 0.3s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $secondaryColor;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.button-wrapper {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: toRem(6);
+	width: 100%;
+
+	color: $secondaryColor;
+	border: 1px solid $secondaryColor;
+	border-radius: toRem(50);
+
+	@include adaptiveValue("font-size", 18, 12);
+	@include adaptiveValue("padding-top", 14, 6);
+	@include adaptiveValue("padding-bottom", 14, 6);
+	@include adaptiveValue("padding-left", 44, 15);
+	@include adaptiveValue("padding-right", 44, 15);
+
+	span {
+		display: block;
+		margin-right: auto;
+
+		@media (max-width: toEm(599)) {
+			display: none;
+		}
+	}
+
+	.contact-social & {
+		padding: toRem(0);
+		height: toRem(46);
+
+		font-size: toRem(15);
+		font-weight: 600;
+		border: none;
+
+		@media (min-width:toEm(600)) {
+			padding-right: toRem(24);
+		}
+
+	}
+
+	.button__telegram & {
+		background: #ecf9ff;
+		color: #2da4d7;
+	}
+
+	.button__whatsapp & {
+		background: #deffea;
+		color: #25d366;
+	}
+
+	.button__email & {
+		background: #fff;
+		color: var(--secondary-color);
+	}
+
+	&__icon {
+		// width: toRem(54);
+		flex: 0 0 toRem(54);
+		height: toRem(46);
+		border-radius: toRem(50);
+		margin-right: auto;
+
+		.button__telegram & {
+			background: linear-gradient(203deg, #37aee2 0%, #1e96c8 100%);
+		}
+
+		.button__whatsapp & {
+			background: #25d366;
+		}
+
+		.button__email & {
+			background: var(--secondary-color);
+		}
+	}
+
+	&__add {
+		display: none;
+
+		background-color: $secondaryColor;
+		font-weight: 600;
+		color: #fff;
+
+		@include adaptiveValue("height", 55, 27);
+
+		.product-card__add-to-cart & {
+			height: toRem(52);
+		}
+	}
+
+
+	&__null {
+		.product-card__add-to-cart & {
+			height: toRem(52);
+		}
+	}
+
+	&.active {
+		display: inline-flex;
+	}
+
+	@media (max-width: toEm(580)) {
+		svg {
+			display: none;
+
+			.contact-social__box & {
+				display: block;
+			}
+		}
+	}
+}
+
+.contact-social__button {
+	transition: all 0.5s;
+	// width: toRem(175);
+	width: 100%;
+
+	&.active {
+		.button-wrapper__null {
+			display: none;
+		}
+
+		.button-wrapper__add {
+			display: flex;
+		}
+	}
+}

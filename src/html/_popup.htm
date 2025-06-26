@@ -1,0 +1,194 @@
+<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Popup content
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+<div id="callback" aria-hidden="true" class="popup popup_show2">
+	<div class="popup__wrapper">
+
+		<div class="popup__content">
+			<div class="popup__top-line">
+				<h1 class="popup__title title-h1">Оставить заявку</h1>
+				<button data-close type="button" class="popup__close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="black" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+			</div>
+
+			<div class="popup__text">
+
+				<form id="formCall" class="form" action="">
+
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">О компании</h2>
+
+						<div class="form__row form__row_about">
+
+							<div class="form__item">
+								<input type="text" name="company" data-required placeholder="Название компании" class="input req">
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="brand" placeholder="Торговая марка / бренд" class="input">
+							</div>
+
+							<div class="form__item">
+								<select name="type-company">
+									<option data-show2 value="" selected>Тип компании</option>
+									<option value="t1">Производитель</option>
+									<option value="t2">Дилер</option>
+									<option value="t3">Торговая компания</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<select class="req" name="category" data-required>
+									<option data-show2 value="" selected>Категории товаров</option>
+									<option value="c1">Мягкая мебель</option>
+									<option value="c2">Корпусная мебель</option>
+									<option value="c3">Мебель, изготовленная по индивидуальным заказам</option>
+									<option value="c4">Чистовые отделочные материалы</option>
+									<option value="c5">Освещение</option>
+									<option value="c6">Декор и интерьерное искусство</option>
+								</select>
+							</div>
+
+							<div class="form__item form__item_text">
+								<textarea class="textarea" name="" id="" placeholder="Дополнительная информация о товарах"></textarea>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">Арендуемая площадь</h2>
+
+						<h3 class="form__subtitle mb-30">Площадь шоурума</h3>
+
+						<div class="form__row form__row_arenda1">
+
+							<div class="form__line">
+								<div class="form__item form__item_sq-min">
+									<input type="text" name="sq-min" data-required placeholder="мин., м²"
+										class="input req">
+								</div>
+
+								<div class="form__item form__item_sq-max">
+									<input type="text" name="sq-max" data-required placeholder="макс., м²"
+										class="input req">
+								</div>
+							</div>
+
+							<div class="form__item">
+								<select name="type-showroom">
+									<option data-show2 value="" selected>Тип шоурума</option>
+									<option value="t1">Открытый</option>
+									<option value="t2">Закрытый</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="date" placeholder="Сроки отделки помещения, дней" class="input">
+							</div>
+
+						</div>
+
+						<div class="form__row form__row_arenda2">
+							<div class="form__item">
+								<select name="is-an-office">
+									<option data-show2 value="" selected>Необходим ли офис?</option>
+									<option value="yes">Да</option>
+									<option value="no">Нет</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="sq-office" placeholder="Площадь под офис, м²" class="input">
+							</div>
+
+							<div class="form__item">
+								<select name="is-an-store">
+									<option data-show2 value="" selected>Необходим ли склад?</option>
+									<option value="yes">Да</option>
+									<option value="no">Нет</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="sq-store" placeholder="Площадь под склад, м²" class="input">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">Контактные данные</h2>
+
+						<div class="form__row form__row_contacts">
+
+							<div class="form__item">
+								<input type="text" name="contact-name" data-required
+									placeholder="Контактное лицо" class="input req">
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="phone" data-required placeholder="Номер телефона" class="input req">
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="email" data-required="email" placeholder="Email"
+									class="input" req>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="www" placeholder="Сайт" class="input">
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="address" placeholder="Юр. адрес компании" class="input">
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="form__footer">
+						<p class="form__privacy text-ph-b mb-30">
+							Нажимая на кнопку «Отправить заявку», вы даете согласие на <a href="">обработку ваших персональных
+								данных.</a>
+						</p>
+					</div>
+
+					<button type="submit" class="btn form__button">
+						<span>Отправить заявку</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 7L17 17M17 17V9M17 17H9" stroke="white" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</button>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<a href="" data-popup="#callback"></a>
+<a href="" data-popup="#help-popup"></a>
+<a href="" data-popup="#promocode-popup"></a>
+<a href="" data-popup="#send-popup"></a>
+<a href="" data-popup="#favorite"></a>
