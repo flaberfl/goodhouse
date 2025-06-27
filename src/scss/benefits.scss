@@ -1,0 +1,73 @@
+.benifits {
+
+	padding-top: toRem(33);
+	padding-bottom: toRem(33);
+
+	/* .benifits__container */
+	&__container {}
+
+	/* .benifits__items */
+	&__items {
+		display: flex;
+		// grid-template-columns: repeat(3, 1fr);
+		// max-width: 389px;
+		gap: 28px;
+
+		@media (max-width:$tablet){
+			gap: 15px;
+		}
+
+		@media (max-width:$mobile){
+			 flex-wrap: wrap;
+			 	gap: 10px;
+		}
+	}
+
+	/* .benifits__item */
+	&__item {
+		width: 33.3%;
+
+		background-color: $whiteColor;
+		border-radius: 10px;
+
+		@include adaptiveValue("padding-top", 40, 28);
+		@include adaptiveValue("padding-right", 30, 22);
+		@include adaptiveValue("padding-bottom", 63, 28);
+		@include adaptiveValue("padding-left", 30, 24);
+
+		@media (max-width:$mobile){
+			 width: 100%;
+		}
+	}
+
+	/* .benifits__icon */
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: $whiteColor;
+		border-radius: 10px;
+		box-shadow: 0 20px 48px 0 rgba(61, 93, 255, 0.2);
+
+		@include adaptiveValue("width", 84, 60);
+		@include adaptiveValue("height", 84, 60);
+		@include adaptiveValue("margin-bottom", 60, 40);
+
+	}
+
+	/* .benifits__text */
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 122%;
+		color: rgba(0, 0, 0, 0.8);
+
+
+		@include adaptiveValue("font-size", 24, 18);
+
+		@media (max-width:$mobile) {
+			color: rgba(5, 10, 28, 0.8);
+		}
+	}
+}

@@ -4,14 +4,22 @@
   }
 
   &__container_intro {
-    padding-top: 203px;
-    padding-bottom: 114px;
+    // padding-top: 203px;
+    // padding-bottom: 114px;
     position: relative;
     width: 100%;
     overflow: hidden;
 
     @include adaptiveValue("padding-top", 203, 244);
-    @include adaptiveValue("padding-bottom", 203, 17);
+    @include adaptiveValue("padding-bottom", 114, 17);
+
+  .intro__container {
+
+    @media (max-width:$tablet){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }    
 
     @media (min-width:$tablet) {
       border-radius: 20px;
