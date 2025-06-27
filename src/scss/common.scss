@@ -28,6 +28,13 @@
   &__main {
     background-color: $masterColor;
     border-radius: 6px;
+    transition: all 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #5090ee;
+      }
+    }
   }
 
   &__outline {
@@ -60,8 +67,26 @@
         }
       }
     }
-
   }
 
 
+}
+
+.btn__outline {
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+
+      background-color: #fff;
+
+      .svg-blue {
+        fill: $masterColor;
+      }
+
+      span {
+        color: $masterColor;
+      }
+    }
+  }
 }
