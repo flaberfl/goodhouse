@@ -10,7 +10,7 @@
 		margin-right: auto;
 		max-width: toRem(1325);
 
-		padding-right: 23px;;
+		padding-right: 23px;
 		padding-left: 40px;
 
 		backdrop-filter: blur(17.100000381469727px);
@@ -22,7 +22,7 @@
 		justify-content: space-between;
 		inset: 0;
 		height: toRem(77);
-		width: 100%;
+		// width: 100%;
 
 		transition: all 0.4s;
 		z-index: 30;
@@ -31,19 +31,24 @@
 
 		._fixed & {
 			max-width: 100%;
-			margin-top: 0;
-			margin-left: 0;
-			margin-right: 0;
+			margin-top: 4px;
+			margin-left: 6px;
+			margin-right: 6px;
 		}
 
 		@media (max-width:$tablet) {
-			margin-top: 0;
+			margin-top: 6px;
 		}
 	}
 
-	&__nav, &__buttons {
+	&__nav,
+	&__buttons {
 		display: flex;
 		align-items: center;
+	}
+
+	&__nav {
+		gap: 56px;
 	}
 
 
@@ -52,17 +57,24 @@
 		// 	@include adaptiveValue("width", 175, 80);
 		// }
 	}
+
+	&__btn {
+		margin-left: 8px;
+	}
 }
 
 .menu {
 	padding: 0 toRem(10); // отступы безопасности
 
+
 	// .menu__body
 
 	&__body {
+		display: flex;
 		width: 100%;
 		// background-color: $terraсotаColor;
-		color: $mainColor;
+		// color: $mainColor;
+		gap: 56px;
 
 		transition: all .7s;
 
