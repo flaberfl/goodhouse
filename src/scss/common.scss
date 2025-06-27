@@ -31,8 +31,8 @@
     border-radius: 6px;
     transition: all 0.3s;
 
-    @media (max-width:$mobile){
-       display: none; 
+    @media (max-width:$mobile) {
+      display: none;
     }
 
     @media (any-hover: hover) {
@@ -169,5 +169,49 @@
 
   @media (max-width:$tablet) {
     display: none;
+  }
+}
+
+.title-h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 96%;
+  letter-spacing: -0.01em;
+  color: $mainColor;
+
+  @include adaptiveValue("font-size", 70, 35);
+  @include adaptiveValue("margin-bottom", 50, 35);
+  @include adaptiveValue("padding-left", 10, 0);
+
+  @media (max-width:$mobile) {
+    line-height: 109%;
+  }
+
+  span {
+    position: relative;
+    color: $whiteColor;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -3.7%;
+      width: 106.7%;
+      top: 1%;
+      background-color: $masterColor;
+      // height: 87px;
+      border-radius: 10px;
+      transform: rotate(-1.3deg);
+      z-index: -1;
+
+      @include adaptiveValue("border-radius", 10, 4);
+      @include adaptiveValue("height", 85, 50);
+
+      @media (max-width:$mobile) {
+        left: -3.1%;
+        width: 107.7%;
+        top: -10%;
+      }
+    }
   }
 }

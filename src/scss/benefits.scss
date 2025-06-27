@@ -3,14 +3,11 @@
 	padding-top: toRem(33);
 	padding-bottom: toRem(33);
 
-	/* .benifits__container */
-	&__container {}
+	@include adaptiveValue("padding-top", 33, 60);
 
 	/* .benifits__items */
 	&__items {
 		display: flex;
-		// grid-template-columns: repeat(3, 1fr);
-		// max-width: 389px;
 		gap: 28px;
 
 		@media (max-width:$tablet){
@@ -53,6 +50,12 @@
 		@include adaptiveValue("width", 84, 60);
 		@include adaptiveValue("height", 84, 60);
 		@include adaptiveValue("margin-bottom", 60, 40);
+
+		img {
+			@media (max-width:$mobile){
+				 width: toRem(22); 
+			}
+		}
 
 	}
 
