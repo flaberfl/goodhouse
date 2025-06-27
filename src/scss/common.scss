@@ -31,6 +31,10 @@
     border-radius: 6px;
     transition: all 0.3s;
 
+    @media (max-width:$mobile){
+       display: none; 
+    }
+
     @media (any-hover: hover) {
       &:hover {
         background-color: #5090ee;
@@ -61,6 +65,12 @@
   }
 
   &__tel {
+
+    @media (max-width:$tablet) {
+      justify-content: start;
+      padding: 0;
+    }
+
     span {
       font-size: 16px;
       line-height: 114%;
@@ -71,6 +81,12 @@
           font-weight: 600;
           color: $masterColor;
         }
+      }
+
+      @media (max-width:$tablet) {
+        font-size: 20px;
+        line-height: 80%;
+        color: $masterColor;
       }
     }
   }
