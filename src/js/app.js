@@ -110,10 +110,10 @@ flsFunctions.menuInit();
 /* Работа с полями формы */
 /* Документация: https://start-template.ru/rabota-s-formami-i-elementami-form-chertogi-frilansera-v3-0-0/ */
 
-flsForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
-});
+// flsForms.formFieldsInit({
+// 	viewPass: false,
+// 	autoHeight: false
+// });
 
 /* Отправка формы */
 /* Документация: https://start-template.ru/rabota-s-formami-i-elementami-form-chertogi-frilansera-v3-0-0/ */
@@ -212,7 +212,7 @@ flsScroll.pageNavigation();
 
 // Функциональность добавления классов в хеддер при прокрутке
 // Документация: https://start-template.ru/modul-dobavleniya-klassov-v-shapku-pri-prokrutke-straniczy-chertogi-frilansera-v3-0-0/
-flsScroll.headerScroll();
+// flsScroll.headerScroll();
 
 // Модуль анимация цифрового счетчика
 // Документация: https://start-template.ru/modul-animaczii-czifrovogo-schetchika/

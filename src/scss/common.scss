@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: .875rem 2rem;
+  transition: all .3s ease;
+
+  width: 186px;
+
+  span {
+    font-family: $secondFamily;
+
+  }
+
+}

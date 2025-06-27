@@ -1,51 +1,51 @@
 //====================================================================================================
 .header {
-	z-index: 700;
-	width: 100%;
-	top: 0;
-	left: 0;
-	padding-left: toRem(6);
-	padding-right: toRem(6);
+
+	&__container_header {}
 
 	&__wrapper {
 		position: fixed;
-		display: flex;
-		align-items: center;
-		top: 0;
-		left: 0;
-		width: 100%;
-		padding: toRem(15) toRem(6);
-		padding-top: toRem(36);
-		transition: all 0.4s;
-		z-index: 30;
-		// background: $terraсotаColor;
+		margin-top: toRem(36);
+		margin-left: auto;
+		margin-right: auto;
+		max-width: toRem(1325);
 
-		// height: toRem(77);
-		// @include adaptiveValue("height", 160, 60);
-
-		._header-scroll & {
-			transform: translateY(-100%);
-			background-color: rgba(156, 51, 39, .9);
-			@include adaptiveValue("height", 120, 60);
-		}
-
-
-		._header-show & {
-			transform: none;
-		}
-	}
-
-	&__container_header {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		justify-content: space-between;
+		padding-right: 23px;;
+		padding-left: 40px;
 
 		backdrop-filter: blur(17.100000381469727px);
 		background: rgba(255, 255, 255, 0.26);
 		background-color: red;
 		border-radius: 6px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		inset: 0;
+		height: toRem(77);
+		width: 100%;
+
+		transition: all 0.4s;
+		z-index: 30;
+
+		@include adaptiveValue("margin-top", 36, 0);
+
+		._fixed & {
+			max-width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@media (max-width:$tablet) {
+			margin-top: 0;
+		}
 	}
+
+	&__nav, &__buttons {
+		display: flex;
+		align-items: center;
+	}
+
 
 	&__logo {
 		// img {
@@ -91,17 +91,17 @@
 
 	&__item {
 
-			font-family: var(--second-family);
-			font-size: toRem(16);
-			line-height: 100%;
-			letter-spacing: -0.05em;
-			color: $whiteColor;
+		font-family: var(--second-family);
+		font-size: toRem(16);
+		line-height: 100%;
+		letter-spacing: -0.05em;
+		color: $whiteColor;
 
-			@media (any-hover: hover){
-				&:hover{
-					text-decoration: underline;
-				}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
+		}
 
 	}
 }
