@@ -46,6 +46,10 @@
 
     span {
       white-space: nowrap;
+
+      @media (max-width:$tablet) {
+        color: $masterColor;
+      }
     }
 
     svg {
@@ -109,9 +113,13 @@
       }
     }
   }
+
+  @media (max-width:$tablet) {
+    .svg-blue {
+      fill: $masterColor;
+    }
+  }
 }
-
-
 
 
 
@@ -124,6 +132,11 @@
     display: block;
     opacity: 1;
   }
+
+  @media (max-width:$tablet) {
+    display: block;
+    opacity: 1;
+  }
 }
 
 .logo-white {
@@ -132,6 +145,10 @@
   transition: all 0.3s;
 
   ._fixed & {
+    display: none;
+  }
+
+  @media (max-width:$tablet) {
     display: none;
   }
 }

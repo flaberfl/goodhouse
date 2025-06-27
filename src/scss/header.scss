@@ -13,7 +13,7 @@
 		padding-right: 23px;
 		padding-left: 40px;
 
-		backdrop-filter: blur(17.100000381469727px);
+		backdrop-filter: blur(17px);
 		background: rgba(255, 255, 255, 0.26);
 		// background-color: red;
 		border-radius: 6px;
@@ -27,14 +27,23 @@
 		transition: all 0.4s;
 		z-index: 30;
 
+		@include adaptiveValue("padding-left", 40, 15);
 		@include adaptiveValue("margin-top", 36, 0);
+
+		@media (max-width: toEm(1100)) {
+			padding-left: 15px;
+		}
+
+		@media (max-width:$tablet) {
+			background-color: $whiteColor;
+		}
 
 		._fixed & {
 			max-width: 100%;
 			margin-top: 4px;
 			margin-left: 6px;
 			margin-right: 6px;
-        background-color: #5090ee;
+			background-color: #5090ee;
 
 		}
 
@@ -50,12 +59,18 @@
 	}
 
 	&__nav {
-		gap: 56px;
+
+		@include adaptiveValue("gap", 56, 15);
+
+		@media (max-width: toEm(1100)) {
+			gap: 15px;
+		}
 	}
 
 
 	&__logo {
 		cursor: pointer;
+
 		img {
 			width: 108px;
 			// @include adaptiveValue("width", 175, 80);
@@ -76,13 +91,16 @@
 	&__body {
 		display: flex;
 		width: 100%;
-		// background-color: $terraсotаColor;
-		// color: $mainColor;
-		gap: 56px;
 
 		transition: all 1s;
 
-		@media (max-width:$mobile) {
+		@include adaptiveValue("gap", 56, 15);
+
+		@media (max-width: toEm(1100)) {
+			gap: 15px;
+		}
+
+		@media (max-width:$tablet) {
 			flex-direction: column;
 			align-items: flex-start;
 			position: fixed;
@@ -129,7 +147,7 @@
 .icon-menu {
 	display: none;
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: toRem(17);
@@ -148,26 +166,26 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(3);
-			background-color: $whiteColor;
-			border-radius: toRem(15);
+			height: toRem(4);
+			background-color: $masterColor;
+			border-radius: toRem(20);
 		}
 
 		&::before {
-			top: toRem(1);
-			right: toRem(7);
-			width: toRem(15);
+			top: toRem(0);
+			// right: toRem(7);
+			width: toRem(27);
 		}
 
 		&::after {
 			bottom: toRem(0);
-			right: toRem(16);
-			width: toRem(15);
+			// right: toRem(16);
+			width: toRem(27);
 		}
 
 		span {
 			top: calc(50% - toRem(1));
-			width: toRem(24);
+			width: toRem(27);
 			right: toRem(7);
 		}
 
