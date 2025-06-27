@@ -1,12 +1,15 @@
 .features {
 	@include adaptiveValue("padding-top", 122, 47);
+	@include adaptiveValue("padding-bottom", 120, 64);
 
+	
 	/* .features__container */
 	&__container {}
 
 	/* .features__title */
 	&__title {
 		max-width: toRem(850);
+		@include adaptiveValue("padding-left", 10, 0);
 		// margin-right: -10px;
 	}
 
@@ -95,8 +98,8 @@
 		@media (max-width: toEm(600)) {
 			aspect-ratio: 310 / 259;
 		}
-
-
+		
+		
 		img {
 			position: absolute;
 			inset: 0;

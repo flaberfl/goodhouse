@@ -175,14 +175,13 @@
 .title-h2 {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 70px;
   line-height: 96%;
   letter-spacing: -0.01em;
   color: $mainColor;
 
   @include adaptiveValue("font-size", 70, 35);
   @include adaptiveValue("margin-bottom", 50, 35);
-  @include adaptiveValue("padding-left", 10, 0);
+
 
   @media (max-width:$mobile) {
     line-height: 109%;
