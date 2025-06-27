@@ -76,10 +76,13 @@
   }
 
   &__filter {
-    width: 204px;
     background: $masterColor;
 
     transition: all 0.3s;
+
+    @media (min-width:$mobile) {
+      width: 204px;
+    }
 
     @media (any-hover: hover) {
       &:hover {

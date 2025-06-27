@@ -10,6 +10,9 @@
     width: 100%;
     overflow: hidden;
 
+    @include adaptiveValue("padding-top", 203, 244);
+    @include adaptiveValue("padding-bottom", 203, 17);
+
     @media (min-width:$tablet) {
       border-radius: 20px;
     }
@@ -70,12 +73,20 @@
   padding: 10px;
   border-radius: 10px;
   background: $whiteColor;
-  height: 60px;
+  // height: 60px;
+
+  @media (max-width:$mobile) {
+    background: #eaeaea;
+  }
 }
 
 .filter {
   display: flex;
   gap: 6px;
+
+  @media (max-width:$mobile) {
+    flex-direction: column;
+  }
 }
 
 
@@ -86,11 +97,19 @@
   height: 40px;
   background: #FFFFFF;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 13px;
   // color: rgba(0, 0, 0, 0.4);
   border: 1px solid #ebebeb;
   border-radius: 6px;
+
+  @media (min-width:$mobile) {
+    justify-content: center;
+  }
+
+  // @media (max-width:$mobile){
+  //    j 
+  // }
 
   p {
     font-weight: 400;
