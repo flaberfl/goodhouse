@@ -5,6 +5,7 @@
   justify-content: center;
   gap: 6px;
   padding: 10px;
+  border-radius: 6px;
   transition: all .3s ease;
 
   height: 43px;
@@ -67,6 +68,24 @@
           color: $masterColor;
         }
       }
+    }
+  }
+
+  &__filter {
+    width: 204px;
+    background: $masterColor;
+
+    transition: all 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: #5090ee;
+      }
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
     }
   }
 

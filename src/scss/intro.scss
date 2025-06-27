@@ -60,3 +60,74 @@
 
 
 }
+
+.search-filter {
+  max-width: 713px;
+  padding: 10px;
+  border-radius: 10px;
+  background: $whiteColor;
+  height: 60px;
+}
+
+.filter {
+  display: flex;
+  gap: 6px;
+}
+
+
+.filter-checkboxes {
+  display: flex;
+  padding: 0 12px;
+  // flex: auto;
+  height: 40px;
+  background: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  // color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+
+.filter-checkboxes-list .filter-checkbox input:checked~span {
+  color: rgba(5, 5, 5, 0.8);
+}
+
+.filter-checkboxes-list .filter-checkbox span {
+  // border-radius: 6px;
+  // height: 28px;
+
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-checkbox {
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgba(5, 5, 5, 0.4);
+    }
+  }
+}
+
+.filter-checkbox input {
+  display: none;
+}
