@@ -141,16 +141,23 @@
 	}
 
 	&__cell {
-		border: 1px solid red;
 		height: 50%;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		padding-left: toRem(13);
-		padding-right: toRem(20);
+		padding-right: toRem(25);
 
-		&:first-child{
+		&:first-child {
 			padding-bottom: toRem(30);
+		}
+
+		&:last-child {
+			background: $masterColor;
+			padding-left: toRem(20);
+			margin: -12px;
+			border-radius: 20px;
+			padding-bottom: toRem(12);
 		}
 	}
 }
