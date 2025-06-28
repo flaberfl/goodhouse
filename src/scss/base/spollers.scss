@@ -12,6 +12,7 @@
 		align-items: center;
 		position: relative;
 		border-radius: 50%;
+		flex-shrink: 0;
 
 		@include adaptiveValue("width", 36, 30);
 		@include adaptiveValue("height", 36, 30);

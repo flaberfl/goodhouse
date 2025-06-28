@@ -8,6 +8,11 @@
 		grid-template-columns: 1fr 1fr;
 		row-gap: 10px;
 		column-gap: 26px;
+
+		@media (max-width:$mobile) {
+			row-gap: 6px;
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* .faq__title */
