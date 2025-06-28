@@ -7,7 +7,9 @@
   &__container {}
 
   /* .guests__title */
-  &__title {}
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 10);
+  }
 
   /* .guests__box */
   &__box {
@@ -15,8 +17,8 @@
     grid-template-columns: 49.1% 1fr;
     gap: 23px;
 
-    @media (max-width:$mobile){
-       grid-template-columns: auto; 
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
     }
   }
 
@@ -88,12 +90,6 @@
     /* .guests__item_2 */
     &_2 {
       width: 46%;
-      // max-width: 277px;
-    }
-
-    /* .guests__item_3 */
-    &_3 {
-      // width: 100%;
     }
 
     /* .guests__item_4 */
@@ -106,9 +102,6 @@
       width: 47%;
     }
 
-    /* .guests__item_6 */
-    &_6 {}
-
     /* .guests__item_7 */
     &_7 {
       width: 60%;
@@ -118,9 +111,6 @@
     &_8 {
       width: 39%;
     }
-
-    /* .guests__item_9 */
-    &_9 {}
 
     /* .guests__item_10 */
     &_10 {
@@ -132,9 +122,6 @@
       width: 48.83%;
     }
 
-    /* .guests__item_12 */
-    &_12 {}
-
     /* .guests__item_13 */
     &_13 {
       width: 44.33%;
@@ -144,9 +131,6 @@
     &_14 {
       width: 54.8%;
     }
-
-    /* .guests__item_15 */
-    &_15 {}
   }
 }
 
