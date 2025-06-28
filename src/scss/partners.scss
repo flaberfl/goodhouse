@@ -60,12 +60,12 @@
 }
 
 
-.swiper-grid-column>.swiper-wrapper {
-	flex-direction: unset !important;
-}
+// .swiper-grid-column>.swiper-wrapper {
+// 	flex-direction: unset !important;
+// }
 
-.swiper-wrapper {
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-auto-flow: column;
-}
+// .swiper-wrapper {
+// 	display: grid;
+// 	grid-template-rows: 1fr 1fr;
+// 	grid-auto-flow: column;
+// }
