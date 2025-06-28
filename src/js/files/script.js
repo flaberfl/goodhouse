@@ -8,15 +8,26 @@ window.addEventListener("load", function () {
 
 
 
-$(function() {
- let header = $('.header');
-  
- $(window).scroll(function() {
-   if($(this).scrollTop() > 40) {
-    header.addClass('_fixed');
-   } else {
-    header.removeClass('_fixed');
-   }
- });
+$(function () {
+  let header = $('.header');
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 40) {
+      header.addClass('_fixed');
+    } else {
+      header.removeClass('_fixed');
+    }
+  });
 });
+
+
+
+// var swiper = new Swiper(".partners__slider", {
+//   slidesPerView: 5.5,
+//   grid: {
+//     rows: 2,
+//     fill: "row",
+//   },
+//   spaceBetween: 20,
+// });
 

@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
+import { Autoplay, Grid } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -18,9 +18,9 @@ EffectFade, Lazy, Manipulation
 
 //Стили Swiper
 //Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 //Полный набор стилей с scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 //Полный набор стилей с node_modules
 // import 'swiper/css';
 
@@ -28,207 +28,52 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	//Список слайдеров
 	//Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.about__slider')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.partners__slider')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper('.about__slider', { //Указываем класс нужного слайдера
+		new Swiper('.partners__slider', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
-			modules: [Navigation, EffectFade, Autoplay],
+			modules: [Grid],
+			grid: {
+				rows: 2,
+				fill: "row",
+			},
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-
-			autoHeight: true,
-			speed: 800,
-
-			lazy: true,
-
-			// slidesPerView: "auto",
-
-
-			effect: "fade",
-			fadeEffect: {
-				crossFade: true
-			},
-
-			// effect: 'creative',
-			// creativeEffect: {
-			// 	prev: {
-			// 		opacity: 0
-			// 	},
-			// 	next: {
-			// 		opacity: 0
-			// 	},
-			// },
-
-			// Эффекты
-			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-
-
-
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.about-btn.swiper-button-prev',
-				nextEl: '.about-btn.swiper-button-next',
-			},
-
-			// Брейкпоинты
-			breakpoints: {
-				360: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					// autoHeight: true,
-				},
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					// autoHeight: true,
-				},
-				768: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-				},
-				992: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-				},
-				1920: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-				},
-			},
-
-			// События
-			on: {
-
-			}
-		});
-	}
-
-	if (document.querySelector('.zoning__slider')) { //Указываем класс нужного слайдера
-		//Создаем слайдер
-		new Swiper('.zoning__slider', { //Указываем класс нужного слайдера
-			//Подключаем модули слайдера
-			//для конкретного случая
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			// slidesPerView: 1,
-			// spaceBetween: 20,
+			slidesPerView: 'auto',
+			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 800,
+			clickable: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			// loop: true,
 			//preloadImages: false,
-			lazy: true,
+			// lazy: true,
 			// centeredSlides: true,
-
-
-
-
-
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.zoning-btn.swiper-button-prev',
-				nextEl: '.zoning-btn.swiper-button-next',
-			},
-
-
-
 
 			// Брейкпоинты
 			breakpoints: {
-				360: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					// autoHeight: true,
-				},
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					// autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				992: {
-
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				1920: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-			},
-
-			// События
-			on: {
-
-			}
-
-		});
-	}
-
-	if (document.querySelector('.gallery__slider')) { //Указываем класс нужного слайдера
-		//Создаем слайдер
-		new Swiper('.gallery__slider', { //Указываем класс нужного слайдера
-			//Подключаем модули слайдера
-			//для конкретного случая
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			// slidesPerView: 1,
-			// spaceBetween: 20,
-			autoHeight: true,
-			speed: 800,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			loop: true,
-			//preloadImages: false,
-			lazy: true,
-			// centeredSlides: true,
-
-
-
-
-
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.gallery-btn.swiper-button-prev',
-				nextEl: '.gallery-btn.swiper-button-next',
-			},
-
-
-			// Брейкпоинты
-			breakpoints: {
-				360: {
-					slidesPerView: 1,
+				390: {
+					slidesPerView: 2.5,
 					spaceBetween: 10,
 					// autoHeight: true,
 				},
 				640: {
-					slidesPerView: 1,
+					slidesPerView: 3,
 					spaceBetween: 10,
-					// autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 4.5,
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 30,
+					slidesPerView: 5,
+					spaceBetween: 20,
 				},
-				1920: {
-					slidesPerView: 3,
-					spaceBetween: 30,
+				1440: {
+					slidesPerView: 5.5,
+					spaceBetween: 20,
 				},
 			},
 
