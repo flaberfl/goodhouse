@@ -13,8 +13,8 @@
 		position: relative;
 		border-radius: 50%;
 
-		@include adaptiveValue("width", 48, 40);
-		@include adaptiveValue("height", 48, 40);
+		@include adaptiveValue("width", 36, 30);
+		@include adaptiveValue("height", 36, 30);
 
 		&::before {
 			content: '';
@@ -23,28 +23,44 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 50%;
-			background: $garkGreenColor;
-			border: 2px solid $garkGreenColor;
+			border: 1px solid $masterColor;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					content: '';
+					background: $secondColor;
+					border: 1px solid $secondColor;
+				}
+
+				svg {
+					path {
+						stroke: $whiteColor;
+					}
+				}
+			}
 		}
 
 
 		svg {
 			position: relative;
 			z-index: 100;
-
+			transition: all 0.3s;
 		}
 
 		._spoller-active & {
 			&::before {
 				content: '';
-				background: $whiteColor;
+				background: $masterColor;
 			}
 
 			svg {
-				transform: rotate(-180deg);
+
+				transform: rotate(90deg);
 
 				path {
-					stroke: $garkGreenColor;
+					stroke: $whiteColor;
 				}
 			}
 
@@ -55,8 +71,7 @@
 // Спойлер
 .spollers__item {
 	overflow: hidden;
-	// font-size: toRem(20);
-	@include adaptiveValue("border-radius", 35, 30);
+	@include adaptiveValue("border-radius", 10, 4);
 }
 
 // Заголовок спойлера
@@ -70,21 +85,14 @@
 	position: relative;
 	list-style: none;
 
-	font-size: toRem(20);
-	font-weight: 600;
-	line-height: 140%;
-	color: $mainColor;
-
 	transition: all 0.3s;
-	padding-top: toRem(30);
-	padding-bottom: toRem(30);
-	@include adaptiveValue("padding-left", 30, 15);
-	@include adaptiveValue("padding-right", 30, 15);
 
 
-	@media (max-width:$mobile) {
-		font-size: toRem(18);
-	}
+	@include adaptiveValue("height", 74, 60);
+
+	// @media (max-width:$mobile) {
+	// 	font-size: toRem(18);
+	// }
 
 	&::marker,
 	&::-webkit-details-marker {
@@ -120,21 +128,21 @@
 
 		&._spoller-active {
 
-			color: $garkGreenColor;
+			// color: $garkGreenColor;
 
-			&::before,
-			&::after {
-				background-color: $mainColor;
+			// &::before,
+			// &::after {
+			// 	// background-color: $mainColor;
 
-			}
+			// }
 
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
+			// &::before {
+			// 	transform: translateX(-75%) rotate(-40deg);
+			// }
 
-			&::after {
-				transform: rotate(40deg);
-			}
+			// &::after {
+			// 	transform: rotate(40deg);
+			// }
 		}
 
 		/*
