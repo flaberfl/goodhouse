@@ -1,5 +1,8 @@
 .callback {
 
+	@include adaptiveValue("padding-top", 120, 80);
+	@include adaptiveValue("padding-bottom", 110, 75);
+
 	/* .callback__container */
 	&__container {}
 
@@ -41,6 +44,7 @@
 		overflow: hidden;
 		text-align: center;
 
+
 		padding-top: toRem(62);
 		padding-right: toRem(28);
 		padding-bottom: toRem(80);
@@ -72,11 +76,51 @@
 	/* .callback__text */
 	&__text {
 		margin-bottom: 32px;
+		max-width: 412px;
+		line-height: 120%;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 400;
+		text-align: center;
+		color: $whiteColor;
+
+		@include adaptiveValue("font-size", 20, 14);
 	}
 
 	/* .callback__form */
-	&__form {}
+	&__form {
+
+		padding-left: 36px;
+		padding-right: 36px;
+	}
 
 	/* .callback__btn */
-	&__btn {}
+	&__btn {
+		height: 62px;
+		background-color: $whiteColor;
+		color: $masterColor;
+		transition: all 0.3s;
+
+		@include adaptiveValue("font-size", 20, 16);
+
+		@media (max-width:$mobile) {
+			height: 50px;
+		}
+
+		&:active {
+			background: $masterColor;
+			color: $whiteColor;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: #83aeeb;
+				color: $whiteColor;
+			}
+		}
+	}
+
+	&__input {
+		margin-bottom: toRem(10);
+	}
 }
