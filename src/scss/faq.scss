@@ -1,4 +1,6 @@
 .faq {
+	@include adaptiveValue("padding-top", 120, 80);
+	@include adaptiveValue("padding-bottom", 94, 71);
 
 	/* .faq__container */
 	&__container {}
