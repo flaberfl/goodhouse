@@ -60,15 +60,15 @@ function initSliders() {
 					// autoHeight: true,
 				},
 				640: {
-					slidesPerView: 3,
+					slidesPerView: 3.5,
 					spaceBetween: 10,
 				},
 				768: {
 					slidesPerView: 4.5,
-					spaceBetween: 20,
+					spaceBetween: 10,
 				},
 				992: {
-					slidesPerView: 5,
+					slidesPerView: 5.5,
 					spaceBetween: 20,
 				},
 				1440: {
