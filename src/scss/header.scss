@@ -77,6 +77,10 @@
 		@media (max-width: toEm(1100)) {
 			gap: 15px;
 		}
+
+		@media (max-width: toEm(435)) {
+			margin-right: -35px;
+		}
 	}
 
 
@@ -87,8 +91,8 @@
 			width: 108px;
 			// @include adaptiveValue("width", 175, 80);
 
-			@media (max-width:$mobile){
-				 width: 90px; 
+			@media (max-width:$mobile) {
+				width: 90px;
 			}
 		}
 	}

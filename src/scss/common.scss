@@ -48,11 +48,21 @@
     border-radius: 6px;
     transition: all 0.3s;
 
+    @media (max-width: toEm(432)) {
+      margin-right: 60px;
+    }
+
     span {
       white-space: nowrap;
 
       @media (max-width:$tablet) {
         color: $masterColor;
+      }
+
+      ._fixed & {
+        @media (max-width:$tablet) {
+          color: $whiteColor;
+        }
       }
     }
 
