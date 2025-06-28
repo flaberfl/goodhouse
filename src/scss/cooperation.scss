@@ -1,0 +1,153 @@
+.cooperation {
+
+	/* .cooperation__container */
+	&__container {}
+
+	/* .cooperation__title */
+	&__title {}
+
+	/* .cooperation__row */
+	&__row {}
+
+	/* .cooperation__slider */
+	&__slider {}
+
+	/* .cooperation__wrapper */
+	&__wrapper {}
+
+	&__box {
+		// max-width: 235px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.cooperation__slide_3 & {
+			justify-content: space-between;
+		}
+	}
+
+	/* .cooperation__slide */
+	&__slide {
+		position: relative;
+		height: 100%;
+
+		width: 236px !important;
+		height: 350px !important;
+
+		align-items: center;
+		overflow: hidden;
+		padding: 12px;
+		@include adaptiveValue("border-radius", 20, 10);
+
+		/* .cooperation__slide_1 */
+		&_1 {
+			background-color: $masterColor;
+		}
+
+		/* .cooperation__slide_2 */
+		&_2 {}
+
+		/* .cooperation__slide_3 */
+		&_3 {
+			background-color: #C2D8F8;
+		}
+
+		/* .cooperation__slide_4 */
+		&_4 {}
+
+		/* .cooperation__slide_5 */
+		&_5 {}
+	}
+
+	/* .cooperation__img */
+	&__img {
+		// overflow: hidden;
+		// position: absolute;
+
+
+		/* .cooperation__img_1 */
+		&_1 {
+			height: 100%;
+			margin-bottom: toRem(42);
+
+
+			.cooperation__gradient {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(180.00deg, rgba(17, 108, 240, 0) 54.167%, rgba(17, 108, 240, 0.4) 74.269%);
+			}
+
+			img {
+				// position: absolute;
+				// inset: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include adaptiveValue("border-radius", 16, 10);
+			}
+
+		}
+
+		&_2 {
+
+			padding: 20px 25px;
+
+			background: rgba(255, 255, 255, 0.49);
+			@include adaptiveValue("border-radius", 16, 10);
+		}
+
+		/* .cooperation__img_3 */
+		&_3 {}
+	}
+
+	/* .cooperation__gradient */
+	&__gradient {
+
+		/* .cooperation__gradient_1 */
+		&_1 {}
+	}
+
+	/* .cooperation__text */
+	&__text {
+		line-height: 110%;
+		color: $masterColor;
+
+		@include adaptiveValue("font-size", 20, 16);
+
+		@media (max-width:$mobile) {
+			line-height: 112%;
+		}
+
+		&.white {
+			color: $whiteColor;
+			z-index: 100;
+		}
+
+		.cooperation__slide_1 & {
+			// margin-top: toRem(42);
+		}
+
+		.cooperation__slide_2 & {
+			margin-top: auto;
+		}
+
+	}
+}
+
+.title-h2 {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.coopertion {
+
+	/* .coopertion__img */
+	&__img {}
+}
+
+.white {}
