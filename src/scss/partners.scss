@@ -30,8 +30,8 @@
 	&__box {
 		overflow: hidden;
 		cursor: pointer;
-		max-width: 230px;
-		min-height: 175px;
+		// max-width: 230px;
+		// min-height: 175px;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -43,8 +43,8 @@
 		@include adaptiveValue("border-radius", 10, 4);
 
 		@media (max-width:$mobileSmall) {
-			max-width: 150px;
-			min-height: 67px;
+			// max-width: 150px;
+			// min-height: 67px;
 		}
 
 		@media (max-width: toEm(390)) {}

@@ -10,7 +10,12 @@
 	&__row {}
 
 	/* .cooperation__slider */
-	&__slider {}
+	&__slider {
+
+		@media (max-width:$mobile){
+			overflow: visible !important;
+		}
+	}
 
 	/* .cooperation__wrapper */
 	&__wrapper {}
@@ -43,6 +48,12 @@
 		align-items: center;
 		overflow: hidden;
 		@include adaptiveValue("border-radius", 20, 10);
+
+		@media (max-width:$mobile){
+			
+		width: 267px !important;
+		height: 237px !important;
+		}
 
 		/* .cooperation__slide_1 */
 		&_1 {
