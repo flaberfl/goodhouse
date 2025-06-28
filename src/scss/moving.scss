@@ -1,0 +1,73 @@
+.moving {
+
+
+	/* .moving__container */
+	&__container {
+		&_width {
+			max-width: 1440px;
+			margin: 0 auto;
+			background-color: $secondColor;
+			@include adaptiveValue("padding-top", 85, 60);
+			@include adaptiveValue("padding-bottom", 85, 24);
+			@include adaptiveValue("border-radius", 20, 10);
+		}
+	}
+
+	/* .moving__title */
+	&__title {
+		color: $masterColor;
+	}
+
+	/* .moving__items */
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+	}
+
+	/* .moving__item */
+	&__item {
+		padding: 23px;
+		border-radius: 10px;
+		background-color: $whiteColor;
+		height: 100%;
+	}
+
+	/* .moving__number */
+	&__number {
+		width: toRem(49);
+		height: toRem(49);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 50px;
+		background-color: $masterColor;
+
+		line-height: 111%;
+		letter-spacing: -0.03em;
+		color: $whiteColor;
+
+		@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("margin-bottom", 44, 14);
+	}
+
+	/* .moving__name */
+	&__name {
+		font-weight: 600;
+		line-height: 110%;
+		color: rgba(0, 0, 0, 0.8);
+
+		@include adaptiveValue("font-size", 24, 20);
+		@include adaptiveValue("margin-bottom", 11, 8);
+	}
+
+	/* .moving__text */
+	&__text {
+		font-weight: 400;
+		line-height: 122%;
+		color: rgba(0, 0, 0, 0.8);
+
+		@include adaptiveValue("font-size", 18, 14);
+	}
+}
