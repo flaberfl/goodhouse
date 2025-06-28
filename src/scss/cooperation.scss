@@ -16,12 +16,18 @@
 	&__wrapper {}
 
 	&__box {
+		padding: 12px;
+
 		// max-width: 235px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 
 		.cooperation__slide_3 & {
+			justify-content: space-between;
+		}
+
+		.cooperation__slide_4 & {
 			justify-content: space-between;
 		}
 	}
@@ -36,7 +42,6 @@
 
 		align-items: center;
 		overflow: hidden;
-		padding: 12px;
 		@include adaptiveValue("border-radius", 20, 10);
 
 		/* .cooperation__slide_1 */
@@ -133,6 +138,20 @@
 			margin-top: auto;
 		}
 
+	}
+
+	&__cell {
+		border: 1px solid red;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-left: toRem(13);
+		padding-right: toRem(20);
+
+		&:first-child{
+			padding-bottom: toRem(30);
+		}
 	}
 }
 
