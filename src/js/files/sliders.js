@@ -85,66 +85,66 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.cooperation__slider')) { //Указываем класс нужного слайдера
-		//Создаем слайдер
-		new Swiper('.cooperation__slider', { //Указываем класс нужного слайдера
-			//Подключаем модули слайдера
-			//для конкретного случая
-			// modules: [Grid],
-			// grid: {
-			// 	rows: 2,
-			// 	fill: "row",
-			// },
-			freeMode: true,
-			observer: true,
-			observeParents: true,
-			slidesPerView: 'auto',
-			spaceBetween: 10,
-			// autoHeight: true,
-			speed: 800,
-			clickable: true,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-			//preloadImages: false,
-			// lazy: true,
-			// centeredSlides: true,
+	// if (document.querySelector('.cooperation__slider')) { //Указываем класс нужного слайдера
+	// 	//Создаем слайдер
+	// 	new Swiper('.cooperation__slider', { //Указываем класс нужного слайдера
+	// 		//Подключаем модули слайдера
+	// 		//для конкретного случая
+	// 		// modules: [Grid],
+	// 		// grid: {
+	// 		// 	rows: 2,
+	// 		// 	fill: "row",
+	// 		// },
+	// 		freeMode: true,
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		slidesPerView: 'auto',
+	// 		spaceBetween: 10,
+	// 		// autoHeight: true,
+	// 		speed: 800,
+	// 		clickable: true,
+	// 		//touchRatio: 0,
+	// 		//simulateTouch: false,
+	// 		// loop: true,
+	// 		//preloadImages: false,
+	// 		// lazy: true,
+	// 		// centeredSlides: true,
 
-			// Брейкпоинты
-			breakpoints: {
-				390: {
-					slidesPerView: 1.2,
-					spaceBetween: 16,
-					// autoHeight: true,
-				},
-				640: {
-					slidesPerView: 2,
-					spaceBetween: 16,
-					// centeredSlides: true,
-					// loop: true 
+	// 		// Брейкпоинты
+	// 		breakpoints: {
+	// 			390: {
+	// 				slidesPerView: 1.2,
+	// 				spaceBetween: 16,
+	// 				// autoHeight: true,
+	// 			},
+	// 			640: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: 16,
+	// 				// centeredSlides: true,
+	// 				// loop: true 
 
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 16,
-				},
-				992: {
-					slidesPerView: 4,
-					spaceBetween: 10,
-				},
-				1440: {
-					slidesPerView: 5,
-					spaceBetween: 10,
-				},
-			},
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 3,
+	// 				spaceBetween: 16,
+	// 			},
+	// 			992: {
+	// 				slidesPerView: 4,
+	// 				spaceBetween: 10,
+	// 			},
+	// 			1440: {
+	// 				slidesPerView: 5,
+	// 				spaceBetween: 10,
+	// 			},
+	// 		},
 
-			// События
-			on: {
+	// 		// События
+	// 		on: {
 
-			}
+	// 		}
 
-		});
-	}
+	// 	});
+	// }
 
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
