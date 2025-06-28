@@ -1,0 +1,33 @@
+.partners {
+
+	/* .partners__container */
+	&__container {}
+
+	/* .partners__title */
+	&__title {}
+
+	/* .partners__row */
+	&__row {}
+
+	/* .partners__slider */
+	&__slider {}
+
+	/* .partners__wrapper */
+	&__wrapper {}
+
+	/* .partners__slide */
+	&__slide {}
+
+	/* .partners__box */
+	&__box {
+		max-width: 230px;
+	}
+}
+
+.title-h2 {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
