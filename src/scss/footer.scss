@@ -52,8 +52,6 @@
 
   /* .footer__left */
   &__left {
-    // flex: auto;
-
     @media (min-width:$tablet) {
       flex-shrink: 0;
     }
