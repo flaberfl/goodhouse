@@ -33,7 +33,6 @@
 		overflow: hidden;
 		cursor: pointer;
 		max-width: 230px;
-		// min-height: 175px;
 		min-height: 145px;
 		position: relative;
 		display: flex;
@@ -46,18 +45,18 @@
 		@include adaptiveValue("border-radius", 10, 4);
 
 		@media (max-width:$mobileSmall) {
-			max-width: 150px;
+			// max-width: 150px;
+			max-width: 165px;
 			min-height: 67px;
 		}
-
-		@media (max-width: toEm(390)) {}
-
-
-
 
 		img {
 			position: absolute;
 			max-width: 100%;
+
+			@media (max-width:$mobileSmall){
+				 width: 50%; 
+			}
 		}
 	}
 }

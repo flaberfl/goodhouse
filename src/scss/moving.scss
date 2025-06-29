@@ -28,7 +28,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 
-		@include adaptiveValue("gap", 24, 7);
+		@include adaptiveValue("gap", 24, 5);
 
 		@media (max-width: toEm(1200)) {
 			grid-template-columns: 1fr 1fr;

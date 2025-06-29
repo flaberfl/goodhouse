@@ -1,18 +1,5 @@
 .support {
 
-  @media (max-width: toEm(600)) {
-    // @include adaptiveValue("margin-top", -103, -203);
-    margin-top: toRem(-103);
-  }
-
-  @media (max-width: toEm(500)) {
-    margin-top: toRem(-153);
-  }
-
-  @media (max-width:$mobileSmall) {
-    margin-top: toRem(-203);
-  }
-
   /* .support__container */
   &__container_width {
     max-width: 1440px;
@@ -35,11 +22,22 @@
     position: relative;
     z-index: 2;
     color: $whiteColor;
-    // margin-left: -7px;
 
     span {
       &::before {
         background-color: $mainColor;
+      }
+
+      @media (max-width: toEm(664)) {
+        // width: 100%;
+      }
+    }
+
+    i {
+      font-style: normal;
+
+      @media (max-width: toEm(664)) {
+        display: block;
       }
     }
   }

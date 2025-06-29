@@ -96,6 +96,7 @@
 		&_1 {
 			height: 100%;
 			margin-bottom: toRem(42);
+			position: relative;
 
 			@media (max-width: toEm(600)) {
 				height: 170px;
@@ -108,7 +109,8 @@
 				inset: 0;
 				width: 100%;
 				height: 100%;
-				background: linear-gradient(180.00deg, rgba(17, 108, 240, 0) 54.167%, rgba(17, 108, 240, 0.4) 74.269%);
+				background: linear-gradient(180.00deg, rgba(17, 108, 240, 0) 60%, rgba(17, 108, 240, 0.6) 82.286%);
+				z-index: 200;
 			}
 
 			img {
@@ -135,7 +137,7 @@
 				inset: 0;
 				width: 100%;
 				height: 100%;
-				background: linear-gradient(180.00deg, rgba(17, 108, 240, 0) 54.167%, rgba(17, 108, 240, 0.4) 74.269%);
+				background: linear-gradient(180.00deg, rgba(17, 108, 240, 0) 60%, rgba(17, 108, 240, 0.6) 82.286%);
 			}
 
 			img {

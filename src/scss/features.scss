@@ -22,7 +22,7 @@
 
 		@media (max-width:$tablet) {
 			grid-template-columns: auto;
-			grid-template-rows: 1fr 1fr;
+			// grid-template-rows: 1fr 1fr;
 		}
 	}
 
@@ -99,13 +99,6 @@
 	&__media {
 		overflow: hidden;
 		position: relative;
-		// height: 100%;
-		// width: 60%;
-		// min-height: toRem(260);
-
-		// margin-left: auto;
-		// margin-right: auto;
-
 
 		@include adaptiveValue("border-radius", 20, 10);
 
@@ -115,11 +108,15 @@
 			margin: 0 auto;
 		}
 
-		@media (max-width: toEm(600)) {
+		@media (max-width:$tablet){
 			aspect-ratio: 310 / 259;
-			width: 60%;
-
+			
 		}
+		// @media (max-width: toEm(600)) {
+		// 	aspect-ratio: 310 / 259;
+		// 	// width: 60%;
+
+		// }
 
 		img {
 			position: absolute;
