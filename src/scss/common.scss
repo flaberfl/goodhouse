@@ -50,24 +50,24 @@
 
     ._fixed & {
       color: $masterColor;
-      border: 1px solid $masterColor;
+
+      @media (min-width:$tablet) {
+        border: 1px solid $masterColor;
+      }
 
       @media (any-hover: hover) {
         &:hover {
           background: rgb(194, 216, 248);
 
           .svg-blue-trubka {
-            transition: all 0.3s;
             fill: $masterColor;
           }
 
           .svg-blue-circl {
-            transition: all 0.3s;
             stop-color: $masterColor;
           }
 
           .svg-blue-fill {
-            transition: all 0.3s;
             fill: rgb(194, 216, 248);
           }
         }
@@ -137,18 +137,24 @@
       }
 
       .svg-blue-trubka {
+        transition: all 0.3s;
+
         ._fixed & {
-          fill: $whiteColor;
+          // fill: $whiteColor;
         }
       }
 
       .svg-blue-fill {
+        transition: all 0.3s;
+
         ._fixed & {
-          fill: $masterColor;
+          // fill: $masterColor;
         }
       }
 
       .svg-blue-circl {
+        transition: all 0.3s;
+
         ._fixed & {
           stop-color: $masterColor;
         }
