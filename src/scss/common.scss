@@ -44,26 +44,83 @@
 
   &__outline {
     width: 199px;
-    border: 1px solid #fff;
+    border: 1px solid $whiteColor;
     border-radius: 6px;
     transition: all 0.3s;
+
+    ._fixed & {
+      color: $masterColor;
+      border: 1px solid $masterColor;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background: rgb(194, 216, 248);
+
+          .svg-blue-trubka {
+            transition: all 0.3s;
+            fill: $masterColor;
+          }
+
+          .svg-blue-circl {
+            transition: all 0.3s;
+            stop-color: $masterColor;
+          }
+
+          .svg-blue-fill {
+            transition: all 0.3s;
+            fill: rgb(194, 216, 248);
+          }
+        }
+      }
+    }
+
+    @media (max-width:$tablet) {
+      .svg-blue-str {
+        fill: $masterColor;
+      }
+    }
 
     @media (max-width: toEm(432)) {
       margin-right: 60px;
     }
 
+    @media (any-hover: hover) {
+      &:hover {
+
+        background-color: #fff;
+
+        .svg-blue-str {
+          fill: $masterColor;
+        }
+
+        span {
+          color: $masterColor;
+
+          ._fixed & {
+            color: $masterColor;
+          }
+        }
+      }
+    }
+
     span {
       white-space: nowrap;
+
+      color: $whiteColor;
+
+      ._fixed & {
+        color: $masterColor;
+      }
 
       @media (max-width:$tablet) {
         color: $masterColor;
       }
 
-      ._fixed & {
-        @media (max-width:$tablet) {
-          color: $whiteColor;
-        }
-      }
+      // ._fixed & {
+      //   @media (max-width:$tablet) {
+      //     color: $whiteColor;
+      //   }
+      // }
     }
 
     svg {
@@ -71,6 +128,32 @@
       height: 25px;
       flex: 0 0 24px;
       width: 100%;
+
+      ._fixed & {
+        svg {
+          height: 23px;
+          width: 23px;
+        }
+      }
+
+      .svg-blue-trubka {
+        ._fixed & {
+          fill: $whiteColor;
+        }
+      }
+
+      .svg-blue-fill {
+        ._fixed & {
+          fill: $masterColor;
+        }
+      }
+
+      .svg-blue-circl {
+        ._fixed & {
+          stop-color: $masterColor;
+        }
+      }
+
     }
   }
 
@@ -85,6 +168,10 @@
       font-size: 16px;
       line-height: 114%;
       transition: all 0.3s;
+
+      ._fixed & {
+        color: $masterColor;
+      }
 
       @media (any-hover: hover) {
         &:hover {
@@ -117,6 +204,7 @@
     }
 
     span {
+      font-family: $fontFamily;
       font-weight: 500;
       font-size: 18px;
     }
@@ -124,32 +212,6 @@
 
 
 }
-
-.btn__outline {
-  transition: all 0.3s;
-
-  @media (any-hover: hover) {
-    &:hover {
-
-      background-color: #fff;
-
-      .svg-blue {
-        fill: $masterColor;
-      }
-
-      span {
-        color: $masterColor;
-      }
-    }
-  }
-
-  @media (max-width:$tablet) {
-    .svg-blue {
-      fill: $masterColor;
-    }
-  }
-}
-
 
 
 .logo-black {

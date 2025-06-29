@@ -103,7 +103,6 @@
 				margin-bottom: toRem(30);
 			}
 
-
 			.cooperation__gradient {
 				position: absolute;
 				inset: 0;
@@ -119,7 +118,6 @@
 				object-fit: cover;
 				@include adaptiveValue("border-radius", 16, 10);
 			}
-
 		}
 
 		&_2 {
