@@ -1,5 +1,5 @@
 .partners {
-	@include adaptiveValue("padding-bottom", 125, 80);
+	@include adaptiveValue("padding-bottom", 143, 80);
 
 	/* .partners__container */
 	&__container {}
@@ -12,15 +12,14 @@
 
 	/* .partners__slider */
 	&__slider {
-		
-		@media (max-width:$mobile){
+
+		@media (max-width:$mobile) {
 			overflow: visible !important;
 		}
 	}
 
 	/* .partners__wrapper */
-	&__wrapper {
-	}
+	&__wrapper {}
 
 	/* .partners__slide */
 	&__slide {
@@ -34,7 +33,8 @@
 		overflow: hidden;
 		cursor: pointer;
 		max-width: 230px;
-		min-height: 175px;
+		// min-height: 175px;
+		min-height: 145px;
 		position: relative;
 		display: flex;
 		justify-content: center;

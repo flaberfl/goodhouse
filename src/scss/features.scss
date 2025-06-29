@@ -2,7 +2,7 @@
 	@include adaptiveValue("padding-top", 122, 47);
 	@include adaptiveValue("padding-bottom", 120, 64);
 
-	
+
 	/* .features__container */
 	&__container {}
 
@@ -18,7 +18,7 @@
 		display: grid;
 		grid-template-columns: 1fr 49.1%;
 
-		@include adaptiveValue("gap", 20, 10);
+		@include adaptiveValue("gap", 20, 9);
 
 		@media (max-width:$tablet) {
 			grid-template-columns: auto;
@@ -29,19 +29,33 @@
 	/* .features__items */
 	&__items {
 		display: grid;
-		row-gap: 8px;
+		gap: 8px;
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+
+		@media (max-width:$mobile) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+		}
 	}
 
 	/* .features__item */
 	&__item {
 		background-color: $whiteColor;
 
-		@include adaptiveValue("padding-top", 36, 20);
+		@include adaptiveValue("padding-top", 36, 23);
 		@include adaptiveValue("padding-right", 32, 15);
 		@include adaptiveValue("padding-bottom", 36, 20);
-		@include adaptiveValue("padding-left", 32, 15);
+		@include adaptiveValue("padding-left", 32, 18);
 
 		@include adaptiveValue("border-radius", 20, 10);
+
+		@media (max-width:$mobile) {
+			min-height: 130px;
+		}
 	}
 
 	/* .features__name */
@@ -50,6 +64,8 @@
 		gap: 10px;
 
 		@include adaptiveValue("margin-bottom", 18, 13);
+
+		// line-height: 1px;
 
 		svg {
 			padding-top: toRem(3);
@@ -61,6 +77,10 @@
 
 			@media (min-width:$mobile) {
 				letter-spacing: -1.7px;
+			}
+
+			@media (max-width:$mobile) {
+				letter-spacing: -0.4px;
 			}
 		}
 	}
@@ -97,8 +117,10 @@
 
 		@media (max-width: toEm(600)) {
 			aspect-ratio: 310 / 259;
+			width: 60%;
+
 		}
-		
+
 		img {
 			position: absolute;
 			inset: 0;

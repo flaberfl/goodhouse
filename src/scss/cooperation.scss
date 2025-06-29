@@ -4,7 +4,9 @@
 	&__container {}
 
 	/* .cooperation__title */
-	&__title {}
+	&__title {
+		max-width: 956px;
+	}
 
 	/* .cooperation__row */
 	&__row {}
@@ -89,6 +91,7 @@
 
 	/* .cooperation__img */
 	&__img {
+
 		/* .cooperation__img_1 */
 		&_1 {
 			height: 100%;

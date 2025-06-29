@@ -71,7 +71,7 @@
 		@include adaptiveValue("padding-top", 62, 43);
 		@include adaptiveValue("padding-right", 28, 37);
 		@include adaptiveValue("padding-left", 28, 37);
-		@include adaptiveValue("padding-bottom", 80, 63);
+		@include adaptiveValue("padding-bottom", 80, 46);
 		@include adaptiveValue("border-radius", 20, 10);
 	}
 
@@ -99,7 +99,6 @@
 
 	/* .callback__text */
 	&__text {
-		margin-bottom: 32px;
 		max-width: 412px;
 		line-height: 120%;
 		margin-left: auto;
@@ -108,6 +107,7 @@
 		text-align: center;
 		color: $whiteColor;
 
+		@include adaptiveValue("margin-bottom", 38, 32);
 		@include adaptiveValue("font-size", 20, 14);
 	}
 
