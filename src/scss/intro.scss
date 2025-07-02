@@ -13,13 +13,13 @@
     @include adaptiveValue("padding-top", 203, 244);
     @include adaptiveValue("padding-bottom", 114, 17);
 
-  .intro__container {
+    .intro__container {
 
-    @media (max-width:$tablet){
-      padding-left: 0;
-      padding-right: 0;
+      @media (max-width:$tablet) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
-  }    
 
     @media (min-width:$tablet) {
       border-radius: 20px;
@@ -130,13 +130,16 @@
 
 .filter-checkboxes-list .filter-checkbox input:checked~span {
   color: rgba(5, 5, 5, 0.8);
+
+  background: #F8F8F8;
+background: red;
 }
 
 .filter-checkboxes-list .filter-checkbox span {
   // border-radius: 6px;
   // height: 28px;
 
-  padding: 0 6px;
+  padding: 8px 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,9 +155,15 @@
 .filter-checkbox {
   transition: all 0.3s;
 
+  // span {
+  //   transition: all 0.3s;
+  // }
+
   @media (any-hover: hover) {
-    &:hover {
-      color: rgba(5, 5, 5, 0.4);
+    span {
+      &:hover {
+        color: #050505;
+      }
     }
   }
 }
