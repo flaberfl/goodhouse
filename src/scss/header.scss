@@ -10,7 +10,7 @@
 		margin-right: auto;
 		max-width: toRem(1325);
 
-		padding-right: 23px;
+		padding-right: 12px;
 		padding-left: 40px;
 
 		backdrop-filter: blur(17px);
@@ -88,11 +88,11 @@
 		cursor: pointer;
 
 		img {
-			width: 108px;
-			// @include adaptiveValue("width", 175, 80);
+			// width: 108px;
+			@include adaptiveValue("width", 108, 76);
 
 			@media (max-width:$mobile) {
-				width: 90px;
+				// width: 90px;
 			}
 		}
 	}
@@ -224,6 +224,7 @@
 		.menu-open & {
 			span {
 				width: 0;
+				display: none;
 			}
 
 			&::before,

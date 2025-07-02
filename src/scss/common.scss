@@ -47,6 +47,8 @@
     border-radius: 6px;
     transition: all 0.3s;
 
+    @include adaptiveValue("width", 199, 147);
+
     ._fixed & {
       color: $masterColor;
 
@@ -114,12 +116,6 @@
       @media (max-width:$tablet) {
         color: $masterColor;
       }
-
-      // ._fixed & {
-      //   @media (max-width:$tablet) {
-      //     color: $whiteColor;
-      //   }
-      // }
     }
 
     svg {
@@ -180,7 +176,6 @@
 
       @media (any-hover: hover) {
         &:hover {
-          font-weight: 600;
           color: $masterColor;
         }
       }
