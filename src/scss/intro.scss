@@ -127,19 +127,21 @@
   }
 }
 
+.filter-checkboxes-list {
+  // display: flex;
+  // gap: 1px;
+}
 
 .filter-checkboxes-list .filter-checkbox input:checked~span {
-  color: rgba(5, 5, 5, 0.8);
-
-  background: #F8F8F8;
-background: red;
+  color: $whiteColor;
+  background: $masterColor;
 }
 
 .filter-checkboxes-list .filter-checkbox span {
   border-radius: 6px;
   // height: 28px;
-
-  padding: 6px 8px;
+  // width: 31px;
+  padding: 6px 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,10 +156,15 @@ background: red;
 
 .filter-checkbox {
   transition: all 0.3s;
+  // width: 31px;
 
   // span {
   //   transition: all 0.3s;
   // }
+
+  &:not(:first-child) {
+    // width: 31px;
+  }
 
   @media (any-hover: hover) {
     span {

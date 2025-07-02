@@ -10,7 +10,6 @@
 
   height: 43px;
   width: 186px;
-  width: 100%;
 
   span {
     font-family: $secondFamily;
@@ -27,11 +26,12 @@
 
   &__main {
     background-color: $masterColor;
-    border-radius: 6px;
     transition: all 0.3s;
 
     @media (max-width:$mobile) {
       display: none;
+      width: 189px;
+      width: 40px;
     }
 
     @media (any-hover: hover) {
@@ -44,7 +44,6 @@
   &__outline {
     width: 199px;
     border: 1px solid $whiteColor;
-    border-radius: 6px;
     transition: all 0.3s;
 
     @include adaptiveValue("width", 199, 147);
@@ -159,7 +158,6 @@
   }
 
   &__tel {
-
     @media (max-width:$tablet) {
       justify-content: start;
       padding: 0;
@@ -195,9 +193,13 @@
 
     @include adaptiveValue("width", 204, 338);
 
-    // @media (min-width:$mobile) {
-    //   width: 204px;
-    // }
+    @media (min-width:$mobile) {
+      width: 204px;
+    }
+
+    @media (max-width:$mobile) {
+      width: 100%;
+    }
 
     @media (any-hover: hover) {
       &:hover {
