@@ -96,7 +96,11 @@
 	// /* Высота строк */
 	// gap: 20px;
 
-	display: flex;
+	// display: flex;
+	// display: grid;
+	// grid-template-columns: 1fr 1fr;
+	// grid-template-columns: repeat(9, 1fr);
+	// grid-template-rows: 1fr 1fr;
 	/* Используем Flexbox */
 	/* Разрешаем перенос элементов на новую строку */
 	// gap: 20px;
@@ -112,6 +116,7 @@
 	img {
 		max-width: 100%;
 		@include adaptiveValue("padding-right", 20, 5);
+		@include adaptiveValue("width", 300, 150);
 	}
 
 }
