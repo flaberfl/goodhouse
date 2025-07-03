@@ -441,8 +441,15 @@
   //   transition: all 0.3s;
   // }
 
-  &:not(:first-child) {
-    // width: 31px;
+
+  .catalog__search-filter & {
+    @media (any-hover: hover) {
+      span {
+        &:hover {
+          color: $masterColor;
+        }
+      }
+    }
   }
 
   @media (any-hover: hover) {

@@ -142,6 +142,13 @@
 		line-height: 107%;
 		color: rgba(5, 5, 5, 0.7);
 
+		@media (any-hover: hover) {
+			&:hover {
+				color: $masterColor;
+			}
+		}
+
+
 		// @media (max-width:$mobile) {
 		// 	font-size: toRem(14);
 		// }
@@ -215,7 +222,6 @@
 		padding: 10px 20px;
 		transition: all 0.3s;
 
-
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 143%;
@@ -226,8 +232,8 @@
 		// 	font-size: toRem(14);
 		// }
 
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				background-color: $masterColor;
 				color: #fff;
 			}
@@ -263,4 +269,6 @@
 	&._select-multiple {}
 
 	&._select-checkbox {}
+
+	&._select-selected {}
 }
