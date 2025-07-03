@@ -26,9 +26,9 @@
 		transition: all 0.4s;
 		z-index: 800;
 
-		@include adaptiveValue("padding-left", 40, 15);
+		// @include adaptiveValue("padding-left", 40, 15);
 		@include adaptiveValue("margin-top", 36, 0);
-
+		
 		.menu-open & {
 			border-radius: 6px 6px 0 0;
 		}
@@ -37,10 +37,12 @@
 		@media (max-width: toEm(1355)) {
 			margin-right: 15px;
 			margin-left: 15px;
+			padding-left: toRem(15);
+			padding-right: toRem(15);
 		}
 
 		@media (max-width: toEm(1100)) {
-			padding-left: 15px;
+			padding-left: 10px;
 		}
 
 		@media (max-width:$tablet) {
@@ -74,7 +76,7 @@
 
 		@include adaptiveValue("gap", 56, 15);
 
-		@media (max-width: toEm(1100)) {
+		@media (max-width: toEm(1146)) {
 			gap: 15px;
 		}
 
@@ -88,6 +90,7 @@
 		cursor: pointer;
 
 		img {
+			transition: all 0.3s;
 			// width: 108px;
 			@include adaptiveValue("width", 108, 76);
 
@@ -95,6 +98,17 @@
 				// width: 90px;
 			}
 		}
+		
+		&.logo-white {
+			@media (any-hover: hover){
+				&:hover{
+					img {
+						opacity: .7;
+					}
+				}
+			}
+		}
+
 	}
 
 	&__btn {

@@ -11,6 +11,15 @@
   height: 43px;
   width: 186px;
 
+
+  @media (max-width: toEm(1010)) {
+
+    .header__buttons & {
+      width: auto;
+    }
+  }
+
+
   span {
     font-family: $secondFamily;
     font-size: 14px;
