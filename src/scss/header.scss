@@ -28,7 +28,7 @@
 
 		// @include adaptiveValue("padding-left", 40, 15);
 		@include adaptiveValue("margin-top", 36, 0);
-		
+
 		.menu-open & {
 			border-radius: 6px 6px 0 0;
 		}
@@ -98,10 +98,10 @@
 				// width: 90px;
 			}
 		}
-		
+
 		&.logo-white {
-			@media (any-hover: hover){
-				&:hover{
+			@media (any-hover: hover) {
+				&:hover {
 					img {
 						opacity: .7;
 					}
@@ -145,7 +145,7 @@
 			// transform: scale(.7);
 			visibility: hidden;
 			opacity: 0;
-			padding: toRem(75) toRem(20) toRem(20);
+			padding: 25px 9px 25px;
 			// min-height: 208px;
 			gap: 8px !important;
 
@@ -188,6 +188,14 @@
 
 	&__footer {
 		display: flex;
+
+		@media (min-width:$tablet) {
+			display: none;
+		}
+
+		@media (max-width:$tablet){
+			margin-top: toRem(18);
+		}
 	}
 }
 

@@ -29,7 +29,7 @@
     white-space: nowrap;
 
     @media (max-width:$tablet) {
-      font-size: 12px;
+      // font-size: 12px;
     }
   }
 
@@ -51,7 +51,6 @@
   }
 
   &__outline {
-    width: 199px;
     border: 1px solid $whiteColor;
     transition: all 0.3s;
 
@@ -90,7 +89,7 @@
     }
 
     @media (max-width: toEm(432)) {
-      margin-right: 60px;
+      // margin-right: 60px;
     }
 
     @media (any-hover: hover) {
@@ -123,6 +122,7 @@
 
       @media (max-width:$tablet) {
         color: $masterColor;
+        font-size: toRem(12);
       }
     }
 
@@ -168,8 +168,9 @@
 
   &__tel {
     @media (max-width:$tablet) {
-      justify-content: start;
-      padding: 0;
+      // justify-content: start;
+      border: 1px solid $masterColor;
+      // padding: 0;
     }
 
     span {
@@ -189,7 +190,6 @@
 
       @media (max-width:$tablet) {
         letter-spacing: -0.02em;
-        
         color: $masterColor;
       }
     }
