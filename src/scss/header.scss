@@ -57,6 +57,10 @@
 		._fixed & {
 			margin-top: 4px;
 			background-color: $whiteColor;
+
+			._catalog & {
+				// margin-top: toRem(22);
+			}
 			// margin-left: 6px;
 			// margin-right: 6px;
 			// background-color: #5090ee;

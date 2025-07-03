@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"GoodHouse"
+})
+
+<body>
+  <div class="wrapper _fixed _catalog">
+    @@include('html/_header.htm',{})
+
+    <main class="page">
+      <div class="breadcrumbs">
+        <nav class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li><a href="https://tretbed.ru">Главная <span>/</span>&nbsp;</a></li>
+            <li>Снять квартиру в Екатеринбурге</li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="catalog">
+        <div class="catalog__container">
+          <h1 class="catalog__title title-h2">
+            Снять квартиру посуточно в Екатеринбурге
+          </h1>
+
+          <div class="catalog__search-filter search-filter">
+            <form method="GET" action="" class="main-filter-form">
+              <div class="filter">
+
+                <div id="rooms" class="filter-checkboxes filter-checkboxes_rooms _catalog">
+                  <p>Комнаты</p>
+                  <div class="filter-checkboxes-list">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="room[]" value="студия">
+                      <span>Студия</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="room[]" value="1">
+                      <span>1</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="room[]" value="2">
+                      <span>2</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="room[]" value="3">
+                      <span>3</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="room[]" value="4+">
+                      <span>4+</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div id="guests" class="filter-checkboxes filter-checkboxes_guest _catalog">
+                  <p>Гостей</p>
+                  <div class="filter-checkboxes-list">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="guest[]" value="1">
+                      <span>1</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="guest[]" value="2">
+                      <span>2</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="guest[]" value="3">
+                      <span>3</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="guest[]" value="4+">
+                      <span>4+</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div id="beds" class="filter-checkboxes filter-checkboxes_beds _catalog">
+                  <p>Кроватей</p>
+                  <div class="filter-checkboxes-list">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="beds[]" value="1">
+                      <span>1</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="beds[]" value="2">
+                      <span>2</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="beds[]" value="3">
+                      <span>3</span>
+                    </label>
+                    <label class="filter-checkbox">
+                      <input type="checkbox" name="beds[]" value="4+">
+                      <span>4+</span>
+                    </label>
+                  </div>
+                </div>
+
+                <select name="form[]" data-show-selected data-class-modif="form" data-speed="250">
+                  <option value="1" selected>Сначала дешевле</option>
+                  <option value="2">Сначала дороже</option>
+                </select>
+
+
+                <button class="intro__btn btn btn__filter">
+                  <span>
+                    Показать квартиры
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
