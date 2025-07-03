@@ -17,14 +17,14 @@
 		@media (max-width:$tablet) {}
 
 		@media (max-width: toEm(1260)) {
-			margin-right: -15px !important;
+			// margin-right: -15px !important;
 		}
 	}
 
 	/* .cooperation__wrapper */
 	&__wrapper {
 		// overflow: hidden;
-		// overflow-x: auto;
+		overflow-x: auto;
 		@include adaptiveValue("gap", 10, 16);
 	}
 
