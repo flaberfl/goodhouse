@@ -30,13 +30,13 @@
   &__content {
     display: flex;
 
-    @include adaptiveValue("gap", 112, 0);
+    @include adaptiveValue("gap", 112, 10);
 
     @media (max-width:$mobile) {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      gap: 52px;
+      gap: 52px !important;
     }
 
   }
@@ -44,8 +44,6 @@
   /* .footer__title */
   &__title {
     color: $whiteColor;
-
-    margin-bottom: 34px;
 
     @include adaptiveValue("margin-bottom", 34, 12);
   }
@@ -84,7 +82,7 @@
   &__contact-line {
     display: flex;
 
-    @include adaptiveValue("gap", 44, 1);
+    gap: 44px;
 
     @media (max-width:$tablet) {
       flex-direction: column;

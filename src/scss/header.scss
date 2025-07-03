@@ -134,8 +134,10 @@
 
 		@include adaptiveValue("gap", 56, 15);
 
-		@media (max-width: toEm(1100)) {
-			gap: 15px;
+		
+
+		@media (max-width: toEm(1116)) {
+			gap: toRem(15) !important;
 		}
 
 		@media (max-width:$tablet) {
