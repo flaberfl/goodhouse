@@ -31,8 +31,8 @@
 			&:hover {
 				&::before {
 					content: '';
-					background: $secondColor;
-					border: 1px solid $secondColor;
+					background: $masterColor;
+					border: 1px solid $masterColor;
 				}
 
 				svg {
@@ -53,12 +53,13 @@
 		._spoller-active & {
 			&::before {
 				content: '';
-				background: $masterColor;
+				background: $secondColor;
+				border-color: $secondColor;
 			}
 
 			svg {
 
-				transform: rotate(90deg);
+				transform: rotate(45deg);
 
 				path {
 					stroke: $whiteColor;
@@ -128,6 +129,11 @@
 		// }
 
 		&._spoller-active {
+			border-radius: 10px 10px 0 0;
+
+			@media (max-width:$mobile) {
+				border-radius: 4px 4px 0 0;
+			}
 
 			// color: $garkGreenColor;
 
@@ -191,8 +197,16 @@
 	background: $whiteColor;
 
 
+	font-family: $secondColor;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 125%;
+	color: rgba(0, 0, 0, 0.7);
+
+
 	padding-bottom: toRem(30);
-	@include adaptiveValue("padding-left", 30, 15);
+	padding-left: toRem(20);
+	// @include adaptiveValue("padding-left", 30, 15);
 	@include adaptiveValue("padding-right", 30, 15);
 
 	@media (max-width:$mobile) {
