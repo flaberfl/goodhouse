@@ -1,27 +1,57 @@
 .footer {
+  // padding-top: toRem(83);
+  // padding-bottom: toRem(62);
+
+  @include adaptiveValue("padding-top", 83, 70);
+  @include adaptiveValue("padding-bottom", 62, 41);
 
   /* .footer__container */
   &__container {}
 
   &__wrapper {
-    margin-right: -50px;
-    margin-left: -50px;
+
     // display: flex;
+
+    @media (min-width:toEm(1350)) {
+      margin-right: -50px;
+      margin-left: -50px;
+    }
   }
 
   /* .footer__content */
   &__content {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
+    justify-content: space-between;
+
+    @include adaptiveValue("margin-bottom", 64, 30);
+
+    @media (max-width: toEm(1060)) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   /* .footer__logo */
-  &__logo {}
+  &__logo {
+    img {
+      @include adaptiveValue("width", 158, 143);
+    }
+  }
 
   /* .footer__list */
   &__list {
     display: flex;
     gap: 111px;
+    @include adaptiveValue("gap", 111, 20);
+
+    @media (max-width: toEm(1120)) {
+      gap: 60px;
+    }
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   /* .footer__column */
@@ -35,13 +65,17 @@
     line-height: 137%;
     letter-spacing: -0.02em;
 
-    margin-bottom: 16px;
+    @include adaptiveValue("margin-bottom", 16, 10);
   }
 
   /* .footer__items */
   &__items {
     display: grid;
     gap: 6px;
+
+    @media (max-width:$mobile) {
+      gap: 3px;
+    }
   }
 
   /* .footer__item */
@@ -68,12 +102,31 @@
   &__tel {}
 
   /* .footer__btn */
-  &__btn {}
+  &__btn {
+    background-color: $masterColor;
+
+    @media (max-width:$mobileSmall) {
+      width: 100%;
+    }
+  }
 
   /* .footer__copyright */
   &__copyright {
     display: flex;
     justify-content: space-between;
+
+    &>* {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+      letter-spacing: -0.02em;
+      color: rgba(5, 5, 5, 0.6);
+    }
+
+    @media (max-width: toEm(630)) {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   /* .footer__ip */
