@@ -20,9 +20,9 @@
 
 	/* .partners__wrapper */
 	&__wrapper {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
-		grid-auto-flow: column;
+		// display: grid;
+		// grid-template-rows: 1fr 1fr;
+		// grid-auto-flow: column;
 		// @include adaptiveValue("gap", 20, 5);
 	}
 
