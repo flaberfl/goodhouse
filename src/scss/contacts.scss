@@ -69,7 +69,9 @@
     line-height: 22px;
     color: $whiteColor;
 
-    @include adaptiveValue("margin-bottom", 56, 48);
+    margin-bottom: toRem(29);
+
+    // @include adaptiveValue("margin-bottom", 56, 48);
 
     @media (max-width:$mobile) {
       justify-self: center;
