@@ -151,6 +151,13 @@
 	/* Выравнивание при прокрутке */
 }
 
+.partners__box {
+	display: flex;
+	flex-direction: column;
+
+	@include adaptiveValue("gap", 20, 5);
+}
+
 
 
 
