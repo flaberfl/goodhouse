@@ -52,6 +52,10 @@
   &__items {
     display: grid;
     gap: 8px;
+
+    @media (max-width:$tablet){
+      gap: 5px;
+    }
   }
 
   /* .guests__row */
