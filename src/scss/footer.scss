@@ -105,6 +105,18 @@
   &__btn {
     background-color: $masterColor;
 
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $whiteColor;
+        border-color: $masterColor;
+        border: 1px solid $masterColor;
+
+        span {
+          color: $masterColor;
+        }
+      }
+    }
+
     @media (max-width:$mobileSmall) {
       width: 100%;
     }
