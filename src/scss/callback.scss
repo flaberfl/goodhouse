@@ -124,6 +124,7 @@
 		height: 62px;
 		background-color: $whiteColor;
 		color: $masterColor;
+		width: 100%;
 		transition: all 0.3s;
 
 		@include adaptiveValue("font-size", 20, 16);
