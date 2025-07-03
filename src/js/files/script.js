@@ -31,3 +31,15 @@ $(function () {
 //   spaceBetween: 20,
 // });
 
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   var flkty = new Flickity('.flickity-slider', {
+//     wrapAround: true, // Бесконечная прокрутка
+//     freeScroll: true, // Разрешить свободную прокрутку
+//     pageDots: false, // Отключаем точки пагинации
+//     prevNextButtons: true, // Включаем кнопки "назад" и "вперед"
+//     cellAlign: 'left', // Выравнивание слайдов по левому краю
+//     contain: false, // Разрешить выход за пределы контейнера
+//   });
+// });

@@ -2,7 +2,9 @@
 	@include adaptiveValue("padding-bottom", 143, 80);
 
 	/* .partners__container */
-	&__container {}
+	&__container {
+		// overflow: visible;
+	}
 
 	/* .partners__title */
 	&__title {}
@@ -14,7 +16,7 @@
 	&__slider {
 
 		@media (max-width:$mobile) {
-			overflow: visible !important;
+			// overflow: visible !important;
 		}
 	}
 
@@ -32,8 +34,8 @@
 
 		// justify-content: center;
 		// align-items: center;
-		margin-right: 20px;
-		@include adaptiveValue("margin-right", 20, 5);
+		// margin-right: 20px;
+		// @include adaptiveValue("margin-right", 20, 5);
 	}
 
 	/* .partners__box */
@@ -60,8 +62,8 @@
 
 		@media (max-width:$mobileSmall) {
 			// max-width: 150px;
-			max-width: 165px;
-			min-height: 67px;
+			// max-width: 165px;
+			// min-height: 67px;
 		}
 
 		// img {
@@ -84,4 +86,81 @@
 // 	display: grid;
 // 	grid-template-rows: 1fr 1fr;
 // 	grid-auto-flow: column;
+// }
+
+.flickity-slider {
+	display: grid;
+	grid-template-rows: repeat(2, auto);
+	grid-auto-flow: column;
+	gap: 20px;
+}
+
+.flickity-viewport {
+	overflow: visible;
+}
+.partners__row {
+	/* Используем CSS Grid */
+	/* Две строки */
+	/* Элементы заполняются по столбцам */
+	// /* Расстояние между элементами */
+	// overflow-x: auto;
+	// /* Горизонтальная прокрутка */
+	// padding-right: 100px;
+	// /* Добавляем отступ справа для выхода за пределы */
+	// scroll-snap-type: x mandatory;
+	// /* Плавная прокрутка */
+	// scroll-behavior: smooth;
+	// /* Плавная прокрутка */
+}
+
+/* Стили для изображений */
+.partners__row img {
+	cursor: pointer;
+	// width: 150px;
+	/* Фиксированная ширина изображений */
+	// height: auto;
+	/* Автоматическая высота */
+	// scroll-snap-align: start;
+	/* Выравнивание при прокрутке */
+}
+
+
+
+
+
+
+// /* Стили для контейнера слайдера */
+// .slider-container {
+// 	width: 100%;
+// 	/* Фиксированная ширина контейнера */
+// 	overflow: hidden;
+// 	/* Скрываем переполнение */
+// 	position: relative;
+// }
+
+// /* Стили для самого слайдера */
+// .flickity-slider {
+// 	display: grid;
+// 	/* Используем CSS Grid для создания двух строк */
+// 	grid-template-rows: repeat(2, auto);
+// 	/* Две строки */
+// 	grid-auto-flow: column;
+// 	/* Элементы заполняются по столбцам */
+// 	gap: 10px;
+// 	/* Расстояние между элементами */
+// 	padding-right: 100px;
+// 	/* Добавляем отступ справа для выхода за пределы */
+// }
+
+// /* Стили для слайдов */
+// .slide {
+// 	width: 150px;
+// 	/* Фиксированная ширина слайда */
+// 	height: 100px;
+// 	/* Фиксированная высота */
+// 	background-color: lightblue;
+// 	border: 1px solid #ccc;
+// 	text-align: center;
+// 	line-height: 100px;
+// 	font-size: 20px;
 // }
