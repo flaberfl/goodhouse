@@ -139,14 +139,14 @@
 			align-items: flex-start;
 			position: fixed;
 			overflow: auto;
-			height: 100%;
+			height: auto;
 			top: 0;
 			left: 0;
 			// transform: scale(.7);
 			visibility: hidden;
 			opacity: 0;
 			padding: toRem(75) toRem(20) toRem(20);
-			min-height: 208px;
+			// min-height: 208px;
 			gap: 8px !important;
 
 			.menu-open & {
