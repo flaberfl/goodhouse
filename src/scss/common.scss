@@ -11,12 +11,15 @@
   height: 43px;
   width: 186px;
 
-
   @media (max-width: toEm(1010)) {
 
     .header__buttons & {
       width: auto;
     }
+  }
+
+  @media (max-width:$tablet){
+    height: 40px;
   }
 
 
@@ -27,21 +30,11 @@
     letter-spacing: -0.05em;
     color: $whiteColor;
     white-space: nowrap;
-
-    @media (max-width:$tablet) {
-      // font-size: 12px;
-    }
   }
 
   &__main {
     background-color: $masterColor;
     transition: all 0.3s;
-
-    // @media (max-width:$mobile) {
-    //   display: none;
-    //   width: 189px;
-    //   width: 40px;
-    // }
 
     @media (any-hover: hover) {
       &:hover {
@@ -168,9 +161,8 @@
 
   &__tel {
     @media (max-width:$tablet) {
-      // justify-content: start;
       border: 1px solid $masterColor;
-      // padding: 0;
+      max-width: 166px;
     }
 
     span {
@@ -222,8 +214,6 @@
       font-size: 18px;
     }
   }
-
-
 }
 
 

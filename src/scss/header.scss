@@ -178,6 +178,7 @@
 
 		@media (max-width:$tablet) {
 			color: $mainColor;
+			letter-spacing: -0.02em;
 		}
 
 		._fixed & {
@@ -193,7 +194,7 @@
 			display: none;
 		}
 
-		@media (max-width:$tablet){
+		@media (max-width:$tablet) {
 			margin-top: toRem(18);
 		}
 	}
