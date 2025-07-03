@@ -37,11 +37,11 @@
     background-color: $masterColor;
     transition: all 0.3s;
 
-    @media (max-width:$mobile) {
-      display: none;
-      width: 189px;
-      width: 40px;
-    }
+    // @media (max-width:$mobile) {
+    //   display: none;
+    //   width: 189px;
+    //   width: 40px;
+    // }
 
     @media (any-hover: hover) {
       &:hover {
@@ -188,8 +188,8 @@
       }
 
       @media (max-width:$tablet) {
-        font-size: 20px;
-        line-height: 80%;
+        letter-spacing: -0.02em;
+        
         color: $masterColor;
       }
     }
