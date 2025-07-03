@@ -18,7 +18,7 @@
     }
   }
 
-  @media (max-width:$tablet){
+  @media (max-width:$tablet) {
     height: 40px;
   }
 
@@ -35,6 +35,19 @@
   &__main {
     background-color: $masterColor;
     transition: all 0.3s;
+
+      ._fixed & {
+        @media (any-hover: hover){
+          &:hover{
+              background-color: $whiteColor;
+              border: 1px solid $masterColor;
+
+              span {
+                color: $masterColor;
+              }
+          }
+        }
+      }
 
     @media (any-hover: hover) {
       &:hover {
@@ -59,6 +72,7 @@
       @media (any-hover: hover) {
         &:hover {
           background: rgb(194, 216, 248);
+          border: none;
 
           .svg-blue-trubka {
             fill: $masterColor;
@@ -177,6 +191,9 @@
       @media (any-hover: hover) {
         &:hover {
           color: $masterColor;
+
+            text-shadow: 1px 0 0 currentColor;
+
         }
       }
 

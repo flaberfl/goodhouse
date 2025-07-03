@@ -164,7 +164,7 @@
 
 	&__item {
 
-		font-family: var(--second-family);
+		// font-family: var(--second-family);
 		font-size: toRem(16);
 		line-height: 100%;
 		letter-spacing: -0.05em;
@@ -183,6 +183,13 @@
 
 		._fixed & {
 			color: #595959;
+
+			@media (any-hover: hover){
+				&:hover{
+					text-decoration: none;
+					color: $masterColor;
+				}
+			}
 		}
 
 	}

@@ -152,6 +152,12 @@
   color: rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
   cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #f8f8f8;
+    }
+  }
 }
 
 .filter-checkbox {
