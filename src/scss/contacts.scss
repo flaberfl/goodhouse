@@ -179,9 +179,9 @@
     width: 100%;
     max-width: 373px;
 
-    @media (max-width:$mobile) {
-      width: toRem(358);
-    }
+    // @media (max-width:$mobile) {
+    //   width: toRem(358);
+    // }
   }
 
   /* .form__btn */

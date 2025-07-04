@@ -1,0 +1,128 @@
+.catalog {
+
+  /* .catalog__container */
+  &__container {}
+
+  /* .catalog__title */
+  &__title {
+    margin-top: 22px;
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 105%;
+    letter-spacing: -0.01em;
+    color: #000;
+  }
+
+  /* .catalog__search-filter */
+  &__search-filter {
+    margin-bottom: 40px;
+  }
+
+  /* .catalog__row */
+  &__row {}
+
+  /* .catalog__list */
+  &__list {}
+
+  /* .catalog__item */
+  &__item {}
+
+  /* .catalog__map */
+  &__map {}
+}
+
+.title-h2 {}
+
+.search-filter {}
+
+.main-filter-form {}
+
+.filter {}
+
+.filter-checkboxes {
+
+  /* .filter-checkboxes_rooms */
+  &_rooms {}
+
+  /* .filter-checkboxes_guest */
+  &_guest {}
+
+  /* .filter-checkboxes_beds */
+  &_beds {}
+}
+
+
+.filter-checkboxes-list {}
+
+.filter-checkbox {}
+
+.intro {
+
+  /* .intro__btn */
+  &__btn {}
+}
+
+.btn {
+
+  /* .btn__filter */
+  &__filter {}
+}
+
+.item-catalog {
+
+  /* .item-catalog__link */
+  &__link {}
+
+  /* .item-catalog__media */
+  &__media {}
+
+  /* .item-catalog__photos */
+  &__photos {}
+
+  /* .item-catalog__pagination */
+  &__pagination {}
+
+  /* .item-catalog__bages */
+  &__bages {}
+
+  /* .item-catalog__favorite */
+  &__favorite {}
+
+  /* .item-catalog__info */
+  &__info {}
+
+  /* .item-catalog__adress */
+  &__adress {}
+
+  /* .item-catalog__price */
+  &__price {}
+
+  /* .item-catalog__desc */
+  &__desc {}
+
+  /* .item-catalog__text */
+  &__text {}
+
+  /* .item-catalog__btn */
+  &__btn {}
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.item-flat {}
+
+.item-beds {}
+
+.item-sq {}
+
+.open-map {}
+
+.svg-icon-open {}

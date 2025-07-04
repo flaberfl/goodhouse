@@ -36,6 +36,10 @@
     background-color: $masterColor;
     transition: all 0.3s;
 
+    @media (max-width: toEm(390)){
+       width: auto; 
+    }
+
     ._fixed & {
       @media (any-hover: hover) {
         &:hover {
@@ -177,12 +181,20 @@
     @media (max-width:$tablet) {
       border: 1px solid $masterColor;
       max-width: 166px;
+
+      @media (max-width: toEm(390)) {
+        width: 100%;
+      }
     }
 
     span {
       font-size: 16px;
       line-height: 114%;
       transition: all 0.3s;
+
+      @media (max-width: toEm(390)) {
+        font-size: 14px;
+      }
 
       ._fixed & {
         color: $masterColor;
