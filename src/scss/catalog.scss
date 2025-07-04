@@ -39,7 +39,10 @@
   &__item {}
 
   /* .catalog__map */
-  &__map {}
+  &__map {
+    overflow: hidden;
+    border-radius: 20px;
+  }
 }
 
 .title-h2 {}
