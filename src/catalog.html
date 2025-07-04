@@ -12,7 +12,7 @@
       <div class="breadcrumbs">
         <nav class="breadcrumbs__container">
           <ul class="breadcrumbs__list">
-            <li><a href="https://tretbed.ru">Главная <span>/</span>&nbsp;</a></li>
+            <li><a href="">Главная <span>/</span>&nbsp;</a></li>
             <li>Снять квартиру в Екатеринбурге</li>
           </ul>
         </nav>
@@ -116,6 +116,7 @@
           <div class="catalog__row">
             <div class="catalog__list">
               <div class="catalog__item item-catalog">
+
                 <a href="" class="item-catalog__link"></a>
 
                 <div class="swiper item-catalog__photos">
@@ -151,9 +152,9 @@
                   <div class="item-catalog__adress">ул. Циолковского 29</div>
                   <div class="item-catalog__price">3 700 <span>₽ за сутки</span></div>
                   <div class="item-catalog__desc">
-                    <span class="item-flat">1-к квартира</span>
-                    <span class="item-beds">2 кровати</span>
-                    <span class="item-sq">25 м²</span>
+                    <span class="item-desc item-flat">1-к квартира</span>
+                    <span class="item-desc item-beds">2 кровати</span>
+                    <span class="item-desc item-sq">25 м²</span>
                   </div>
                   <p class="item-catalog__text">Для тех, кто стремится жить в мегаполисе с комфортом, сохраняя свою
                     индивидуальность. Единая комплексная среда с развитой...
@@ -161,9 +162,31 @@
 
                   <button class="item-catalog__btn btn">Забронировать</button>
                 </div>
+
               </div>
             </div>
             <div class="catalog__map">
+
+
+
+              <div id="map"></div>
+
+              <script type="text/javascript">
+                ymaps.ready(function () {
+                  var myMap = new ymaps.Map('map', {
+                    center: [55.751574, 37.573856],
+                    zoom: 10,
+                  });
+
+                  var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
+                    hintContent: 'Москва',
+                    balloonContent: 'Столица России',
+                  });
+
+                  myMap.geoObjects.add(myPlacemark);
+                });
+              </script>
+
               <button class="open-map">
                 <svg class="svg-icon-open" width="12" height="12" viewBox="0 0 12 12" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
