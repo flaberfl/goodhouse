@@ -30,7 +30,10 @@
   }
 
   /* .catalog__list */
-  &__list {}
+  &__list {
+    display: grid;
+    gap: 10px;
+  }
 
   /* .catalog__item */
   &__item {}
@@ -121,7 +124,22 @@
   }
 
   /* .item-catalog__pagination */
-  &__pagination {}
+  &__pagination {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 12px;
+    gap: 5px;
+    z-index: 2;
+    cursor: pointer;
+
+    ._catalog & {
+      left: 50%;
+      transform: translate(-50%, 0px);
+
+    }
+
+  }
 
   /* .item-catalog__bages */
   &__bages {
@@ -148,8 +166,27 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-
+    
     z-index: 2;
+    
+    svg {
+      transition: all 0.3s;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .svg-fav-null {
+          opacity: 0;
+        }
+
+        .svg-fav-path {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   /* .item-catalog__info */
@@ -271,4 +308,77 @@
   max-height: 100%;
   width: 100%;
   height: 100%;
+  height: 501px;
+}
+
+
+.ymaps-2-1-79-controls-pane {
+  display: none;
+  /* Скрывает все элементы управления */
+}
+
+.swiper-pagination-bullet {
+
+  ._catalog & {
+    width: 8px;
+    height: 8px;
+    background-color: #dedede;
+    border-radius: 50px;
+  }
+}
+
+._catalog .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.item-catalog .swiper-button-prev,
+.item-catalog .swiper-button-next {
+
+  opacity: 0;
+  // position: relative;
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  svg {
+    z-index: 3;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+}
+
+.item-catalog__photos {
+  @media (any-hover: hover) {
+    &:hover {
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.svg-fav-path {
+  opacity: 0;
 }

@@ -131,21 +131,357 @@
                     какой-то бейдж
                   </div>
                   <div class="item-catalog__favorite">
-                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z"
                         fill="white" />
                     </svg>
 
-                    <svg style="display: none" width="26" height="22" viewBox="0 0 26 22" fill="none"
+
+                    <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z"
+                        fill="white" />
+                    </svg>
+
+                    <svg class="svg-fav-fill" style="display: none" width="26" height="22" viewBox="0 0 26 22"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z"
                         fill="#116CF0" />
                     </svg>
 
                   </div>
-                  <div class="swiper-pagination item-catalog__pagination"></div>
+                  <div class="swiper-pagination item-catalog__pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  <button type="button" class="swiper-button-prev"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                  <button type="button" class="swiper-button-next"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                </div>
+
+                <div class="item-catalog__info">
+                  <div class="item-catalog__adress">ул. Циолковского 29</div>
+                  <div class="item-catalog__price">3 700 <span>₽ за сутки</span></div>
+                  <div class="item-catalog__desc">
+                    <span class="item-desc item-flat">1-к квартира</span>
+                    <span class="item-desc item-beds">2 кровати</span>
+                    <span class="item-desc item-sq">25 м²</span>
+                  </div>
+                  <p class="item-catalog__text">Для тех, кто стремится жить в мегаполисе с комфортом, сохраняя свою
+                    индивидуальность. Единая комплексная среда с развитой...
+                  </p>
+
+                  <button class="item-catalog__btn btn">Забронировать</button>
+                </div>
+
+              </div>
+              <div class="catalog__item item-catalog">
+
+                <a href="" class="item-catalog__link"></a>
+
+                <div class="swiper item-catalog__photos">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="@img/slider/01.jpg" alt="Image">
+                    </div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                  </div>
+                  <div class="item-catalog__bages">
+                    какой-то бейдж
+                  </div>
+                  <div class="item-catalog__favorite">
+                    <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z"
+                        fill="white" />
+                    </svg>
+
+
+                    <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z"
+                        fill="white" />
+                    </svg>
+
+                    <svg class="svg-fav-fill" style="display: none" width="26" height="22" viewBox="0 0 26 22"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z"
+                        fill="#116CF0" />
+                    </svg>
+
+                  </div>
+                  <div class="swiper-pagination item-catalog__pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  <button type="button" class="swiper-button-prev"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                  <button type="button" class="swiper-button-next"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                </div>
+
+                <div class="item-catalog__info">
+                  <div class="item-catalog__adress">ул. Циолковского 29</div>
+                  <div class="item-catalog__price">3 700 <span>₽ за сутки</span></div>
+                  <div class="item-catalog__desc">
+                    <span class="item-desc item-flat">1-к квартира</span>
+                    <span class="item-desc item-beds">2 кровати</span>
+                    <span class="item-desc item-sq">25 м²</span>
+                  </div>
+                  <p class="item-catalog__text">Для тех, кто стремится жить в мегаполисе с комфортом, сохраняя свою
+                    индивидуальность. Единая комплексная среда с развитой...
+                  </p>
+
+                  <button class="item-catalog__btn btn">Забронировать</button>
+                </div>
+
+              </div>
+              <div class="catalog__item item-catalog">
+
+                <a href="" class="item-catalog__link"></a>
+
+                <div class="swiper item-catalog__photos">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="@img/slider/01.jpg" alt="Image">
+                    </div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                  </div>
+                  <div class="item-catalog__bages">
+                    какой-то бейдж
+                  </div>
+                  <div class="item-catalog__favorite">
+                    <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z"
+                        fill="white" />
+                    </svg>
+
+
+                    <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z"
+                        fill="white" />
+                    </svg>
+
+                    <svg class="svg-fav-fill" style="display: none" width="26" height="22" viewBox="0 0 26 22"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z"
+                        fill="#116CF0" />
+                    </svg>
+
+                  </div>
+                  <div class="swiper-pagination item-catalog__pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  <button type="button" class="swiper-button-prev"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                  <button type="button" class="swiper-button-next"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                </div>
+
+                <div class="item-catalog__info">
+                  <div class="item-catalog__adress">ул. Циолковского 29</div>
+                  <div class="item-catalog__price">3 700 <span>₽ за сутки</span></div>
+                  <div class="item-catalog__desc">
+                    <span class="item-desc item-flat">1-к квартира</span>
+                    <span class="item-desc item-beds">2 кровати</span>
+                    <span class="item-desc item-sq">25 м²</span>
+                  </div>
+                  <p class="item-catalog__text">Для тех, кто стремится жить в мегаполисе с комфортом, сохраняя свою
+                    индивидуальность. Единая комплексная среда с развитой...
+                  </p>
+
+                  <button class="item-catalog__btn btn">Забронировать</button>
+                </div>
+
+              </div>
+              <div class="catalog__item item-catalog">
+
+                <a href="" class="item-catalog__link"></a>
+
+                <div class="swiper item-catalog__photos">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="@img/slider/01.jpg" alt="Image">
+                    </div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                  </div>
+                  <div class="item-catalog__bages">
+                    какой-то бейдж
+                  </div>
+                  <div class="item-catalog__favorite">
+                    <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z"
+                        fill="white" />
+                    </svg>
+
+
+                    <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z"
+                        fill="white" />
+                    </svg>
+
+                    <svg class="svg-fav-fill" style="display: none" width="26" height="22" viewBox="0 0 26 22"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z"
+                        fill="#116CF0" />
+                    </svg>
+
+                  </div>
+                  <div class="swiper-pagination item-catalog__pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  <button type="button" class="swiper-button-prev"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                  <button type="button" class="swiper-button-next"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                </div>
+
+                <div class="item-catalog__info">
+                  <div class="item-catalog__adress">ул. Циолковского 29</div>
+                  <div class="item-catalog__price">3 700 <span>₽ за сутки</span></div>
+                  <div class="item-catalog__desc">
+                    <span class="item-desc item-flat">1-к квартира</span>
+                    <span class="item-desc item-beds">2 кровати</span>
+                    <span class="item-desc item-sq">25 м²</span>
+                  </div>
+                  <p class="item-catalog__text">Для тех, кто стремится жить в мегаполисе с комфортом, сохраняя свою
+                    индивидуальность. Единая комплексная среда с развитой...
+                  </p>
+
+                  <button class="item-catalog__btn btn">Забронировать</button>
+                </div>
+
+              </div>
+              <div class="catalog__item item-catalog">
+
+                <a href="" class="item-catalog__link"></a>
+
+                <div class="swiper item-catalog__photos">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="@img/slider/01.jpg" alt="Image">
+                    </div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                    <div class="swiper-slide"><img src="@img/slider/01.jpg" alt="Image"></div>
+                  </div>
+                  <div class="item-catalog__bages">
+                    какой-то бейдж
+                  </div>
+                  <div class="item-catalog__favorite">
+                    <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z"
+                        fill="white" />
+                    </svg>
+
+
+                    <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z"
+                        fill="white" />
+                    </svg>
+
+                    <svg class="svg-fav-fill" style="display: none" width="26" height="22" viewBox="0 0 26 22"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z"
+                        fill="#116CF0" />
+                    </svg>
+
+                  </div>
+                  <div class="swiper-pagination item-catalog__pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  <button type="button" class="swiper-button-prev"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z"
+                        fill="#116CF0" />
+                    </svg></button>
+                  <button type="button" class="swiper-button-next"><svg width="15" height="14" viewBox="0 0 15 14"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z"
+                        fill="#116CF0" />
+                    </svg></button>
                 </div>
 
                 <div class="item-catalog__info">
@@ -172,19 +508,7 @@
               <div id="map"></div>
 
               <script type="text/javascript">
-                ymaps.ready(function () {
-                  var myMap = new ymaps.Map('map', {
-                    center: [55.751574, 37.573856],
-                    zoom: 10,
-                  });
 
-                  var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
-                    hintContent: 'Москва',
-                    balloonContent: 'Столица России',
-                  });
-
-                  myMap.geoObjects.add(myPlacemark);
-                });
               </script>
 
               <button class="open-map">

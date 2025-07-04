@@ -18,34 +18,58 @@ $(function () {
       header.removeClass('_fixed');
     }
   });
+
+  // var map;                 // Глобальная переменная для Я.Карты
+  // var clusterer;           // Кластеризатор
+
+  // function initMap() {
+  //   ymaps.ready(function () {
+  //     map = new ymaps.Map('map', {
+  //       center: [51.7684, 55.0969], // Оренбург
+  //       zoom: 10,
+  //       controls: ['zoomControl']
+  //     });
+
+  //     clusterer = new ymaps.Clusterer({
+  //       clusterDisableClickZoom: false,
+  //       preset: 'islands#invertedGreenClusterIcons',
+  //       geoObjectHideIconOnBalloonOpen: false,
+  //       clusterIconShape: {
+  //         type: 'Circle',
+  //         coordinates: [0, 0],
+  //         radius: 30
+  //       },
+  //       // Задаём цвет для кластеров:
+  //       clusterIconColor: '#14a759'
+  //     });
+
+  //     map.geoObjects.add(clusterer);
+  //     // updateMap();
+  //   });
+  // }
+  // initMap();
+
+  // function bigMap() {
+  //   $('.catalog__map').toggleClass('big-map');
+  //   $('.catalog__list').toggleClass('big-map');
+  //   $('.open-map svg').toggle()
+  //   setTimeout(function () {
+  //     if (map) {
+  //       map.container.fitToViewport(); // Перестроить карту под новый размер
+  //     }
+  //   }, 300);
+  // }
+
+  // $('.open-map').click(function () {
+  //   bigMap()
+  //   popup.hide();
+  // });
+
+
 });
 
 
-// function initMap() {
-//   ymaps.ready(function () {
-//     map = new ymaps.Map('map', {
-//       center: [51.7684, 55.0969], // Оренбург
-//       zoom: 10,
-//       controls: ['zoomControl']
-//     });
 
-//     clusterer = new ymaps.Clusterer({
-//       clusterDisableClickZoom: false,
-//       preset: 'islands#invertedGreenClusterIcons',
-//       geoObjectHideIconOnBalloonOpen: false,
-//       clusterIconShape: {
-//         type: 'Circle',
-//         coordinates: [0, 0],
-//         radius: 30
-//       },
-//       // Задаём цвет для кластеров:
-//       clusterIconColor: '#14a759'
-//     });
-
-//     map.geoObjects.add(clusterer);
-//     updateMap();
-//   });
-// }
 
 
 
@@ -70,3 +94,19 @@ $(function () {
 //     contain: false, // Разрешить выход за пределы контейнера
 //   });
 // });
+
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [55.751574, 37.573856],
+    zoom: 10,
+  });
+
+  var myPlacemark = new ymaps.Placemark([55.751574, 37.573856],  {
+    hintContent: 'Москва',
+    balloonContent: 'Столица России',
+    controls: [],
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+});
