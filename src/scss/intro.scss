@@ -98,9 +98,23 @@
   display: flex;
   gap: 6px;
 
+  ._catalog & {
+    @media (max-width: toEm(1154)) {
+      gap: 3px;
+    }
+  }
+
+  ._catalog & {
+    @media (max-width: toEm(1145)) {
+      justify-content: space-between;
+      gap: 6px;
+    }
+  }
+
   @media (max-width:$mobile) {
     flex-direction: column;
   }
+
 }
 
 
@@ -207,6 +221,10 @@
 
   &._catalog {
     flex: 0 1 317px;
+
+    @media (max-width: toEm(1156)) {
+      flex: 0 1 300px;
+    }
   }
 }
 
@@ -221,6 +239,10 @@
 
   &._catalog {
     flex: 0 1 237px;
+
+    @media (max-width: toEm(1145)) {
+      display: none;
+    }
   }
 
 }
