@@ -19,11 +19,11 @@ $(function () {
     }
   });
 
-  var myMap;
+  var map;
 
 
   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
+    var map = new ymaps.Map('map', {
       center: [55.751574, 37.573856],
       zoom: 10,
     });
@@ -34,26 +34,40 @@ $(function () {
       controls: [],
     });
 
-    myMap.geoObjects.add(myPlacemark);
+    map.geoObjects.add(myPlacemark);
   });
 
   function bigMap() {
     $('.catalog__row').toggleClass('big-map');
     $('.catalog__map').toggleClass('big-map');
+    $("#map").toggleClass('big-map');
     $('.catalog__list').toggleClass('big-map');
     $('.open-map span').toggle();
     $('.open-map svg').toggle()
+    console.log(window.innerHeight);
     setTimeout(function () {
-      if (myMap) {
-        console.log('ok');
-        myMap.container.fitToViewport(); // Перестроить карту под новый размер
+      if (map) {
+        map.container.fitToViewport(); // Перестроить карту под новый размер
       }
     }, 300);
+
+    const originalHeight = window.innerHeight;
+
+    // Увеличиваем высоту окна на 100 пикселей
+    window.resizeBy(0, 1000);
+    console.log(window.innerWidth);
+    // Возвращаем исходную высоту через небольшую задержку
+    setTimeout(() => {
+      window.resizeBy(0, -1000);
+    }, 500);
+
+    console.log(window.innerHeight);
   }
 
   $('.open-map').click(function () {
     bigMap()
   });
+
 
   // var map;                 // Глобальная переменная для Я.Карты
   // var clusterer;           // Кластеризатор
