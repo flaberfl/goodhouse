@@ -76,7 +76,6 @@
 
 }
 
-
 .search-filter {
 
   padding: 10px;
@@ -92,6 +91,14 @@
   &.intro__search-filter {
     max-width: 713px;
   }
+
+  ._catalog & {
+    @media (max-width: toEm(528)) {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
 }
 
 .filter {
@@ -111,10 +118,19 @@
     }
   }
 
-  @media (max-width:$mobile) {
-    flex-direction: column;
+  ._catalog & {
+    @media (max-width: toEm(710)) {
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
   }
 
+
+  .intro__search-filter & {
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+  }
 }
 
 
@@ -138,6 +154,20 @@
   ._catalog & {
     background-color: #f9f9f9;
     border: none;
+
+    @media (max-width: toEm(528)) {
+      background-color: #eaeaea;
+    }
+
+    @media (max-width: toEm(390)) {
+      padding: 0 9px;
+    }
+
+    .filter-name {
+      @media (max-width: toEm(528)) {
+        display: none;
+      }
+    }
   }
 
   // @media (max-width:$mobile){
@@ -224,6 +254,10 @@
 
     @media (max-width: toEm(1156)) {
       flex: 0 1 300px;
+
+      @media (max-width: toEm(710)) {
+        flex-basis: auto;
+      }
     }
   }
 }
@@ -232,6 +266,10 @@
 
   &._catalog {
     flex: 0 1 210px;
+
+    @media (max-width: toEm(710)) {
+      flex-basis: auto;
+    }
   }
 }
 

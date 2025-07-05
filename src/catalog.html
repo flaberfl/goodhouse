@@ -24,12 +24,17 @@
             Снять квартиру посуточно <br> в Екатеринбурге
           </h1>
 
-          <div class="catalog__search-filter search-filter">
-            <form method="GET" action="" class="main-filter-form">
-              <div class="filter">
 
+          <div class="catalog__search-filter search-filter">
+            <div class="catalog__filter-mob-top">
+              <p>Комнаты</p>
+              <p>Гостей</p>
+            </div>
+            <form method="GET" action="" class="main-filter-form">
+
+              <div class="filter">
                 <div id="rooms" class="filter-checkboxes filter-checkboxes_rooms _catalog">
-                  <p>Комнаты</p>
+                  <p class="filter-name">Комнаты</p>
                   <div class="filter-checkboxes-list">
                     <label class="filter-checkbox">
                       <input type="checkbox" name="room[]" value="студия">
@@ -55,7 +60,7 @@
                 </div>
 
                 <div id="guests" class="filter-checkboxes filter-checkboxes_guest _catalog">
-                  <p>Гостей</p>
+                  <p class="filter-name">Гостей</p>
                   <div class="filter-checkboxes-list">
                     <label class="filter-checkbox">
                       <input type="checkbox" name="guest[]" value="1">
@@ -98,7 +103,7 @@
                   </div>
                 </div>
 
-                <select name="form[]" data-show-selected data-class-modif="form" data-speed="250">
+                <select name="form[]" data-show-selected data-class-modif="search-filter" data-speed="250">
                   <option value="1" selected>Сначала дешевле</option>
                   <option value="2">Сначала дороже</option>
                 </select>

@@ -235,8 +235,16 @@
       width: 204px !important;
     }
 
-    @media (max-width:$mobile) {
-      width: 100%;
+    .intro__search-filter & {
+      @media (max-width:$mobile) {
+        width: 100%;
+      }
+    }
+
+    ._catalog & {
+      @media (max-width: toEm(710)) {
+        width: 100%;
+      }
     }
 
     @media (any-hover: hover) {

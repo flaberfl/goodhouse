@@ -25,10 +25,45 @@
     }
   }
 
+  &__filter-mob-top {
+    display: none;
+
+    p {
+      font-size: 16px;
+      color: #050505;
+    }
+
+    @media (max-width: toEm(528)) {
+      display: flex;
+      margin-bottom: toRem(9);
+      gap: 174px;
+      // max-width: 368px;
+    }
+
+    @media (max-width: toEm(390)) {
+      gap: 158px;
+    }
+  }
+
   /* .catalog__search-filter */
   &__search-filter {
 
     @include adaptiveValue("margin-bottom", 40, 19);
+
+    @media (max-width: toEm(930)) {
+      max-width: 696px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: toEm(710)) {
+      max-width: 510px;
+    }
+
+    @media (max-width: toEm(528)) {
+      max-width: 368px;
+    }
+
   }
 
   /* .catalog__row */
@@ -64,9 +99,13 @@
   }
 }
 
-.title-h2 {}
 
-.search-filter {}
+.select_search-filter {
+  @media (max-width: toEm(930)) {
+    display: none;
+  }
+}
+
 
 .main-filter-form {}
 
