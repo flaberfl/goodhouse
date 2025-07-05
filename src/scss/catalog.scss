@@ -24,22 +24,24 @@
 
   /* .catalog__row */
   &__row {
-    // display: flex;
-    // justify-content: flex-start;
     display: grid;
     grid-template-columns: 65.8% auto;
     gap: 13px;
 
     &.big-map {
       grid-template-columns: auto 65%;
+      gap: 24px;
     }
   }
 
   /* .catalog__list */
   &__list {
+    display: grid;
     gap: 10px;
 
-    &.big-map {}
+    &.big-map {
+      gap: 6px;
+    }
   }
 
   /* .catalog__item */
@@ -50,16 +52,6 @@
     overflow: hidden;
     border-radius: 20px;
     width: 100%;
-    // max-width: 406px;
-    // height: 600px;
-
-
-
-
-
-    &.big-map {
-      max-width: 1000px;
-    }
   }
 }
 
@@ -107,6 +99,7 @@
   position: relative;
   padding: 14px;
   border-radius: 20px;
+  padding-right: 40px;
   display: flex;
   gap: 23px;
 
@@ -142,6 +135,11 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+
+    .big-map & {
+      max-width: 163px;
+      height: 147px;
+    }
   }
 
   /* .item-catalog__pagination */
@@ -179,6 +177,10 @@
     line-height: 114%;
     color: $masterColor;
     z-index: 2;
+
+    .big-map & {
+      display: none;
+    }
   }
 
   /* .item-catalog__favorite */
@@ -189,6 +191,11 @@
     cursor: pointer;
 
     z-index: 2;
+
+    .big-map & {
+      top: 5px;
+      right: 5px;
+    }
 
     svg {
       transition: all 0.3s;
@@ -242,6 +249,11 @@
     color: $mainColor;
 
     margin-bottom: 14px;
+
+    .big-map & {
+      font-size: 16px;
+      line-height: 100%;
+    }
   }
 
   /* .item-catalog__price */
@@ -252,6 +264,11 @@
     color: $masterColor;
 
     margin-bottom: 17px;
+
+    .big-map & {
+      font-size: 16px;
+      line-height: 100%;
+    }
   }
 
   /* .item-catalog__desc */
@@ -261,6 +278,10 @@
     gap: 26px;
 
     margin-bottom: 20px;
+
+    .big-map & {
+      gap: 13px;
+    }
   }
 
   /* .item-catalog__text */
@@ -272,6 +293,10 @@
     font-weight: 400;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.6);
+
+    .big-map & {
+      display: none;
+    }
   }
 
   /* .item-catalog__btn */
@@ -293,6 +318,10 @@
       &:hover {
         background-color: #5090ee;
       }
+    }
+
+    .big-map & {
+      display: none;
     }
 
   }
@@ -325,7 +354,18 @@
       right: -16px;
       top: 50%;
       transform: translate(0px, -50%);
+
+      .big-map & {
+        width: 5px;
+        height: 5px;
+        right: -10px;
+      }
     }
+  }
+
+  .big-map & {
+    font-size: 10px;
+    line-height: 160%;
   }
 }
 
@@ -334,6 +374,22 @@
 .item-beds {}
 
 .item-sq {}
+
+.item-link {
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 114%;
+  color: $masterColor;
+  display: none;
+
+  .big-map & {
+    display: block;
+    display: flex;
+    margin-top: auto;
+  }
+}
 
 .open-map {
   position: absolute;
@@ -361,17 +417,15 @@
 
 .catalog__map {
   position: relative;
-  // height: 501px;
+  height: 501px;
 }
 
 .catalog__map #map {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   height: 501px;
-
-
 }
 
 #map {

@@ -51,8 +51,8 @@ $(function () {
   function bigMap() {
     $('.catalog__row').toggleClass('big-map');
     $('.catalog__map').toggleClass('big-map');
-    $("#map").toggleClass('big-map');
     $('.catalog__list').toggleClass('big-map');
+    $('.catalog__item').toggleClass('big-map');
     $('.open-map span').toggle();
     $('.open-map svg').toggle()
   }
