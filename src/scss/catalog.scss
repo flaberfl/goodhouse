@@ -331,7 +331,11 @@
 
 .swiper-wrapper {}
 
-.swiper-slide {}
+.swiper-slide {
+  img {
+    width: 100%;
+  }
+}
 
 .swiper-pagination {}
 
