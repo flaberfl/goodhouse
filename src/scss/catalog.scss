@@ -33,7 +33,7 @@
       color: #050505;
     }
 
-    @media (max-width: toEm(528)) {
+    @media (max-width: toEm(538)) {
       display: flex;
       margin-bottom: toRem(9);
       gap: 174px;
@@ -51,16 +51,16 @@
     @include adaptiveValue("margin-bottom", 40, 19);
 
     @media (max-width: toEm(930)) {
-      max-width: 696px;
+      max-width: 711px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    @media (max-width: toEm(710)) {
+    @media (max-width: toEm(723)) {
       max-width: 510px;
     }
 
-    @media (max-width: toEm(528)) {
+    @media (max-width: toEm(538)) {
       max-width: 368px;
     }
 
@@ -101,7 +101,7 @@
 
 
 .select_search-filter {
-  @media (max-width: toEm(930)) {
+  @media (max-width: toEm(943)) {
     display: none;
   }
 }

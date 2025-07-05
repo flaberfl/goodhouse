@@ -242,7 +242,7 @@
     }
 
     ._catalog & {
-      @media (max-width: toEm(710)) {
+      @media (max-width: toEm(723)) {
         width: 100%;
       }
     }
@@ -362,3 +362,11 @@
     }
   }
 }
+
+.span-1 {
+
+  @media (max-width:$tablet){
+    padding: 6px 9px !important;
+  }
+}
+
