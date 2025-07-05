@@ -17,29 +17,7 @@
           </ul>
         </nav>
       </div>
-
-
-
-
-      <h1>Измените размер окна браузера</h1>
-      <div id="size">Текущий размер окна: ?</div>
-
-      <script>
-        // Функция для обновления информации о размерах окна
-        function updateSize() {
-          const width = window.innerWidth;
-          const height = window.innerHeight;
-          document.getElementById('size').textContent = `Текущий размер окна: ${width} x ${height}`;
-        }
-
-        // Добавляем обработчик события resize
-        window.addEventListener('resize', updateSize);
-
-        // Вызываем функцию один раз при загрузке страницы
-        updateSize();
-      </script>
-
-
+      
       <section class="catalog">
         <div class="catalog__container">
           <h1 class="catalog__title title-h2">

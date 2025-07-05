@@ -28,6 +28,17 @@ $(function () {
       zoom: 10,
     });
 
+    const openMapButton = document.querySelector('.open-map');
+
+    // Добавляем обработчик клика на кнопку
+    openMapButton.addEventListener('click', function () {
+      // Вызываем метод fitToViewport для обновления карты
+
+      setTimeout(function () {
+        map.container.fitToViewport(); // Перестроить карту под новый размер
+      }, 300);
+    });
+
     var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
       hintContent: 'Москва',
       balloonContent: 'Столица России',
@@ -44,24 +55,6 @@ $(function () {
     $('.catalog__list').toggleClass('big-map');
     $('.open-map span').toggle();
     $('.open-map svg').toggle()
-    console.log(window.innerHeight);
-    setTimeout(function () {
-      if (map) {
-        map.container.fitToViewport(); // Перестроить карту под новый размер
-      }
-    }, 300);
-
-    const originalHeight = window.innerHeight;
-
-    // Увеличиваем высоту окна на 100 пикселей
-    window.resizeBy(0, 1000);
-    console.log(window.innerWidth);
-    // Возвращаем исходную высоту через небольшую задержку
-    setTimeout(() => {
-      window.resizeBy(0, -1000);
-    }, 500);
-
-    console.log(window.innerHeight);
   }
 
   $('.open-map').click(function () {
