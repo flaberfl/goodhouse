@@ -102,11 +102,28 @@ ymaps.ready(function () {
     zoom: 10,
   });
 
-  var myPlacemark = new ymaps.Placemark([55.751574, 37.573856],  {
+  var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
     hintContent: 'Москва',
     balloonContent: 'Столица России',
     controls: [],
   });
 
   myMap.geoObjects.add(myPlacemark);
+});
+
+
+document.body.addEventListener('click', (event) => {
+  // Находим ближайший элемент с классом favorite
+  const clickedElement = event.target.closest('.item-catalog__favorite');
+
+  if (clickedElement) {
+    // Проверяем, есть ли у элемента класс active
+    if (clickedElement.classList.contains('active')) {
+      // Если класс active есть, удаляем его
+      clickedElement.classList.remove('active');
+    } else {
+      // Если класса active нет, добавляем его
+      clickedElement.classList.add('active');
+    }
+  }
 });

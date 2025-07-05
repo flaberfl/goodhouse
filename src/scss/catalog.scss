@@ -169,9 +169,9 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-    
+
     z-index: 2;
-    
+
     svg {
       transition: all 0.3s;
       position: absolute;
@@ -188,6 +188,22 @@
         .svg-fav-path {
           opacity: 1;
         }
+      }
+    }
+
+    &.active {
+      .svg-fav-fill {
+        display: block;
+        top: 5px;
+        right: 2px;
+      }
+
+      .svg-fav-null {
+        opacity: 0;
+      }
+
+      .svg-fav-path {
+        opacity: 0;
       }
     }
   }
@@ -384,4 +400,8 @@
 
 .svg-fav-path {
   opacity: 0;
+}
+
+.svg-fav-fill {
+  display: none;
 }
