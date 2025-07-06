@@ -43,6 +43,10 @@
     @media (max-width: toEm(390)) {
       gap: 158px;
     }
+
+    @media (max-width: toEm(360)) {
+      gap: 128px;
+    }
   }
 
   /* .catalog__search-filter */

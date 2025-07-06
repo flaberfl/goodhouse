@@ -29,6 +29,18 @@ $(function () {
   })
 
 
+  $('.filter-reset').on('click', function () {
+    // Сброс полей формы
+    $('#catalog-form')[0].reset();
+
+    // Снимаем все чекбоксы вручную
+    $('input[type="checkbox"]').prop('checked', false);
+
+    // Очищаем URL от всех параметров
+    // window.location.href = window.location.pathname;
+  });
+
+
 
   var map;
   ymaps.ready(function () {
