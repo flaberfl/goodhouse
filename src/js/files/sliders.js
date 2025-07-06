@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, Grid } from 'swiper/modules';
+import { Autoplay, Grid, Navigation, Thumbs } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -84,6 +84,54 @@ function initSliders() {
 
 		});
 	}
+
+
+	if (document.querySelector('.gallery-top__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.gallery-top__slider', { //Указываем класс нужного слайдера
+			modules: [Navigation, Thumbs],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 7,
+			loop: false,
+			// grabCursor: true,
+			// watchSlidesVisibility: true,
+			// loopedSlides: 5,
+			navigation: {
+				nextEl: '.swiper-button-next.gallery-next',
+				prevEl: '.swiper-button-prev.gallery-prev',
+			},
+			thumbs: {
+				//Свайпер с миниатюрами
+				//и его настройки
+				swiper: {
+					el: '.gallery-thumbs__slider',
+					slidesPerView: 5,
+				}
+			},
+			// События
+			on: {
+			}
+
+		});
+	}
+
+	if (document.querySelector('.gallery-thumbs__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.gallery-thumbs__slider', { //Указываем класс нужного слайдера
+			modules: [Thumbs],
+			spaceBetween: 7,
+			loop: false,
+			grabCursor: true,
+			slidesPerView: 5,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			on: {
+			}
+		});
+	}
+
+
 
 	// if (document.querySelector('.cooperation__slider')) { //Указываем класс нужного слайдера
 	// 	//Создаем слайдер
