@@ -10,7 +10,6 @@ window.addEventListener("load", function () {
 
 $(function () {
   let header = $('.header');
-
   $(window).scroll(function () {
     if ($(this).scrollTop() > 40) {
       header.addClass('_fixed');
@@ -19,9 +18,19 @@ $(function () {
     }
   });
 
+  $('.filter-open').click(function () {
+    $('.catalog__filter-row').fadeIn();
+    $('html').addClass('lock ')
+  })
+
+  $('.close-filter').click(function () {
+    $('.catalog__filter-row').fadeOut();
+    $('html').removeClass('lock')
+  })
+
+
+
   var map;
-
-
   ymaps.ready(function () {
     var map = new ymaps.Map('map', {
       center: [55.751574, 37.573856],
@@ -60,54 +69,6 @@ $(function () {
   $('.open-map').click(function () {
     bigMap()
   });
-
-
-  // var map;                 // Глобальная переменная для Я.Карты
-  // var clusterer;           // Кластеризатор
-
-  // function initMap() {
-  //   ymaps.ready(function () {
-  //     map = new ymaps.Map('map', {
-  //       center: [51.7684, 55.0969], // Оренбург
-  //       zoom: 10,
-  //       controls: ['zoomControl']
-  //     });
-
-  //     clusterer = new ymaps.Clusterer({
-  //       clusterDisableClickZoom: false,
-  //       preset: 'islands#invertedGreenClusterIcons',
-  //       geoObjectHideIconOnBalloonOpen: false,
-  //       clusterIconShape: {
-  //         type: 'Circle',
-  //         coordinates: [0, 0],
-  //         radius: 30
-  //       },
-  //       // Задаём цвет для кластеров:
-  //       clusterIconColor: '#14a759'
-  //     });
-
-  //     map.geoObjects.add(clusterer);
-  //     // updateMap();
-  //   });
-  // }
-  // initMap();
-
-  // function bigMap() {
-  //   $('.catalog__map').toggleClass('big-map');
-  //   $('.catalog__list').toggleClass('big-map');
-  //   $('.open-map svg').toggle()
-  //   setTimeout(function () {
-  //     if (map) {
-  //       map.container.fitToViewport(); // Перестроить карту под новый размер
-  //     }
-  //   }, 300);
-  // }
-
-  // $('.open-map').click(function () {
-  //   bigMap()
-  //   popup.hide();
-  // });
-
 
 });
 

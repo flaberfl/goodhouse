@@ -581,3 +581,19 @@
 .svg-fav-fill {
   display: none;
 }
+
+.catalog__filter-row {
+  @media (max-width: toEm(538)) {
+    display: none;
+    position: fixed;
+    z-index: 35;
+    padding: 0 20px;
+    background: #f5f5f5;
+    width: 100%;
+    left: 0;
+    top: 0;
+    // height: 100vh;
+    padding-top: 80px;
+    overflow-y: auto;
+  }
+}
