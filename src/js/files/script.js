@@ -42,32 +42,32 @@ $(function () {
 
 
 
-  var map;
-  ymaps.ready(function () {
-    var map = new ymaps.Map('map', {
-      center: [55.751574, 37.573856],
-      zoom: 10,
-    });
+  // var map;
+  // ymaps.ready(function () {
+  //   var map = new ymaps.Map('map', {
+  //     center: [55.751574, 37.573856],
+  //     zoom: 10,
+  //   });
 
-    const openMapButton = document.querySelector('.open-map');
+  //   const openMapButton = document.querySelector('.open-map');
 
-    // Добавляем обработчик клика на кнопку
-    openMapButton.addEventListener('click', function () {
-      // Вызываем метод fitToViewport для обновления карты
+  //   // Добавляем обработчик клика на кнопку
+  //   openMapButton.addEventListener('click', function () {
+  //     // Вызываем метод fitToViewport для обновления карты
 
-      setTimeout(function () {
-        map.container.fitToViewport(); // Перестроить карту под новый размер
-      }, 300);
-    });
+  //     setTimeout(function () {
+  //       map.container.fitToViewport(); // Перестроить карту под новый размер
+  //     }, 300);
+  //   });
 
-    var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
-      hintContent: 'Москва',
-      balloonContent: 'Столица России',
-      controls: [],
-    });
+  //   var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
+  //     hintContent: 'Москва',
+  //     balloonContent: 'Столица России',
+  //     controls: [],
+  //   });
 
-    map.geoObjects.add(myPlacemark);
-  });
+  //   map.geoObjects.add(myPlacemark);
+  // });
 
   function bigMap() {
     $('.catalog__row').toggleClass('big-map');
@@ -83,34 +83,6 @@ $(function () {
   });
 
 });
-
-
-
-
-
-
-// var swiper = new Swiper(".partners__slider", {
-//   slidesPerView: 5.5,
-//   grid: {
-//     rows: 2,
-//     fill: "row",
-//   },
-//   spaceBetween: 20,
-// });
-
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   var flkty = new Flickity('.flickity-slider', {
-//     wrapAround: true, // Бесконечная прокрутка
-//     freeScroll: true, // Разрешить свободную прокрутку
-//     pageDots: false, // Отключаем точки пагинации
-//     prevNextButtons: true, // Включаем кнопки "назад" и "вперед"
-//     cellAlign: 'left', // Выравнивание слайдов по левому краю
-//     contain: false, // Разрешить выход за пределы контейнера
-//   });
-// });
-
 
 
 

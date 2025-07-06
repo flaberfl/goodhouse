@@ -358,11 +358,19 @@
     // }
 
     li {
+      transition: all 0.3s;
+
       &:first-child {
         color: rgba(5, 10, 28, 0.6);
 
         span {
           color: rgba(5, 10, 28, 0.8);
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $masterColor;
         }
       }
     }
