@@ -337,7 +337,7 @@
 
 
 .breadcrumbs {
-  @include adaptiveValue("padding-top", 110, 62);
+  @include adaptiveValue("padding-top", 110, 55);
 
   /* .breadcrumbs__container */
   &__container {}
@@ -351,9 +351,11 @@
     line-height: 187%;
     color: #050a1c;
 
-    @media (max-width: toEm(390)) {
-      font-size: 15px;
-    }
+    @include adaptiveValue("font-size", 16, 12);
+
+    // @media (max-width: toEm(390)) {
+    //   font-size: 12px;
+    // }
 
     li {
       &:first-child {

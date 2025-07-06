@@ -7,9 +7,6 @@
 
   /* .catalog__title */
   &__title {
-    margin-top: 22px;
-    margin-bottom: 30px;
-
     font-weight: 700;
     font-size: 65px;
     line-height: 105%;
@@ -18,10 +15,13 @@
 
     @include adaptiveValue("font-size", 62, 22);
 
+    @include adaptiveValue("margin-top", 22, 6);
+    @include adaptiveValue("margin-bottom", 30, 19);
+
     @media (max-width:$mobile) {
       font-weight: 600;
       line-height: 109%;
-      letter-spacing: -0.02em;
+      letter-spacing: -1.1px;
     }
   }
 
@@ -154,14 +154,23 @@
 
 .item-catalog {
   position: relative;
-  padding: 14px;
-  border-radius: 20px;
-  padding-right: 40px;
   display: flex;
+  padding: 14px;
   gap: 23px;
 
   background-color: #fff;
   transition: all 0.3s;
+
+  @include adaptiveValue("border-radius", 20, 6);
+
+  @media (min-width:toEm(1110)) {
+    padding-right: 40px;
+  }
+
+  @media (max-width:$mobile) {
+    gap: 20px;
+    padding: 12px;
+  }
 
   @media (any-hover: hover) {
     &:hover {
@@ -197,11 +206,11 @@
     overflow: hidden;
     position: relative;
 
-    // @media (max-width: toEm(1130)) {
-    //   max-width: 255px;
-    //   // width: 100%;
-    //   height: 255px;
-    // }
+    @media (max-width: toEm(1110)) {
+      max-width: 333px;
+      // width: 100%;
+      height: 265px;
+    }
 
     .big-map & {
       max-width: 163px;
@@ -302,10 +311,10 @@
 
   /* .item-catalog__info */
   &__info {
-    padding-top: 16px;
     display: flex;
     flex-direction: column;
-    // padding-right: 80px;
+
+    @include adaptiveValue("padding-top", 16, 2);
   }
 
   /* .item-catalog__adress */
@@ -316,6 +325,10 @@
     color: $mainColor;
 
     margin-bottom: 14px;
+
+    @media (max-width:$mobile) {
+      font-size: 20px;
+    }
 
     .big-map & {
       font-size: 16px;
@@ -331,6 +344,10 @@
     color: $masterColor;
 
     margin-bottom: 17px;
+
+    @media (max-width:$mobile) {
+      font-size: 20px;
+    }
 
     .big-map & {
       font-size: 16px;
@@ -364,6 +381,11 @@
       padding-right: 80px;
     }
 
+    @media (max-width:$mobile) {
+      font-size: 14px;
+      line-height: 143%;
+    }
+
     .big-map & {
       display: none;
     }
@@ -383,6 +405,8 @@
     letter-spacing: -0.05em;
     color: #fff;
     transition: all 0.3s;
+
+    @include adaptiveValue("height", 62, 52);
 
     @media (any-hover: hover) {
       &:hover {
@@ -438,6 +462,10 @@
         right: -10px;
       }
     }
+  }
+
+  @media (max-width:$mobile) {
+    font-size: 14px;
   }
 
   .big-map & {
