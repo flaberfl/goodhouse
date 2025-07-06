@@ -337,7 +337,7 @@
 
 
 .breadcrumbs {
-  padding-top: toRem(110);
+  @include adaptiveValue("padding-top", 110, 62);
 
   /* .breadcrumbs__container */
   &__container {}
@@ -350,6 +350,10 @@
     font-size: 16px;
     line-height: 187%;
     color: #050a1c;
+
+    @media (max-width: toEm(390)) {
+      font-size: 15px;
+    }
 
     li {
       &:first-child {
@@ -365,8 +369,35 @@
 
 .span-1 {
 
-  @media (max-width:$tablet){
+  @media (max-width:$tablet) {
     padding: 6px 9px !important;
   }
 }
 
+.filter-open {
+  display: none;
+
+  @media (max-width: toEm(538)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid $masterColor;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 167%;
+    letter-spacing: -0.02em;
+    color: $masterColor;
+  }
+}
+
+.filter-mob-top {
+  @media (max-width: toEm(538)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+}
