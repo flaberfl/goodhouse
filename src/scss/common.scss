@@ -357,23 +357,28 @@
     //   font-size: 12px;
     // }
 
-    li {
-      transition: all 0.3s;
+  }
 
-      &:first-child {
+  &__item {
+    transition: all 0.3s;
+
+    &_active {
+      a {
         color: rgba(5, 10, 28, 0.6);
 
         span {
           color: rgba(5, 10, 28, 0.8);
         }
-      }
 
-      @media (any-hover: hover) {
-        &:hover {
-          color: $masterColor;
+        @media (any-hover: hover) {
+          &:hover {
+            color: $masterColor;
+          }
         }
       }
+
     }
+
   }
 }
 
