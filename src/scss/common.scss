@@ -394,10 +394,16 @@
 }
 
 .filter-mob-top {
+  display: none;
+
   @media (max-width: toEm(538)) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+
+    font-weight: 400;
+    font-size: 14px;
+    color: $masterColor;
   }
 }
