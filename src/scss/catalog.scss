@@ -80,6 +80,11 @@
       grid-template-columns: auto 65%;
       gap: 24px;
     }
+
+    @media (max-width: toEm(1110)) {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
   }
 
   /* .catalog__list */
@@ -162,6 +167,10 @@
     &:hover {
       box-shadow: 0 27px 42px 0 rgba(64, 94, 137, 0.19);
     }
+  }
+
+  @media (max-width:$mobile) {
+    flex-direction: column;
   }
 
   /* .item-catalog__link */
@@ -344,13 +353,16 @@
 
   /* .item-catalog__text */
   &__text {
-    // max-width: 374px;
-    padding-right: 80px;
+    margin-bottom: 30px;
 
     font-size: 16px;
     font-weight: 400;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.6);
+
+    @media (min-width:toEm(1110)) {
+      padding-right: 80px;
+    }
 
     .big-map & {
       display: none;
