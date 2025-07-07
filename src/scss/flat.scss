@@ -71,10 +71,40 @@
   /* .flat__text-wrapper */
   &__text-wrapper {
     max-width: 676px;
+    position: relative;
   }
 
   /* .flat__text-content */
-  &__text-content {}
+  &__text-content {
+    overflow: hidden;
+    position: relative;
+    max-height: 4.5em;
+    /* Ограничение высоты текста (3 строки) */
+    transition: max-height 0.3s ease;
+    /* Плавный переход */
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3em;
+      /* Высота градиента */
+      background: linear-gradient(0deg, #f4f4f4 0%, rgba(244, 244, 244, 0) 100%);
+      pointer-events: none;
+    }
+
+    &.open {
+      max-height: none;
+
+      /* Убираем ограничение высоты */
+      &::after {
+        display: none;
+      }
+    }
+
+  }
 
   /* .flat__text */
   &__text {

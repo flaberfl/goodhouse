@@ -220,6 +220,19 @@ document.body.addEventListener('click', (event) => {
 // }
 
 
+// Кнопка Узнать больше
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textWrapper = document.querySelector(".flat__text-content");
+  const readMoreButton = document.querySelector(".read-more-btn");
+
+  readMoreButton.addEventListener("click", () => {
+    textWrapper.classList.add("open");
+    readMoreButton.style.display = "none";
+  });
+});
+
+
 
 
 
