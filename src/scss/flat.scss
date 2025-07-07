@@ -69,13 +69,21 @@
   }
 
   /* .flat__text-wrapper */
-  &__text-wrapper {}
+  &__text-wrapper {
+    max-width: 676px;
+  }
 
   /* .flat__text-content */
   &__text-content {}
 
   /* .flat__text */
-  &__text {}
+  &__text {
+    font-weight: 400;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+
+    @include adaptiveValue("font-size", 16, 10);
+  }
 
   /* .flat__equipment */
   &__equipment {}
