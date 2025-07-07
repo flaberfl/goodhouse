@@ -8,7 +8,7 @@
   &__row {
     display: grid;
     grid-template-columns: 57.6% auto;
-    @include adaptiveValue("gap", 40, 1);
+    @include adaptiveValue("gap", 24, 1);
   }
 
   /* .flat__content */
@@ -205,7 +205,10 @@
 
   /* .flat__map */
   &__map {
-  background-color: red;
+    margin-bottom: 14px;
+
+    background-color: red;
+
     #map {
       max-width: 100%;
       max-height: 100%;
@@ -217,7 +220,18 @@
 
   /* .flat__btn */
   &__btn {
+    width: 100%;
+    @include adaptiveValue("height", 67, 45);
 
+    span {
+      color: $masterColor;
+      @include adaptiveValue("font-size", 22, 14);
+    }
+
+    &_blue {
+      margin-bottom: 7px;
+      background-color: $masterColor;
+    }
   }
 
   /* .flat__more */
