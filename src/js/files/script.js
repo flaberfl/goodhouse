@@ -139,32 +139,32 @@ $(function () {
 
   // Проверяем наличие элемента #map для инициализации карты
   let mapElement = document.getElementById('map');
-  // if (mapElement) {
-  //   ymaps.ready(function () {
-  //     var map = new ymaps.Map('map', {
-  //       center: [55.751574, 37.573856],
-  //       zoom: 10,
-  //     });
+  if (mapElement) {
+    ymaps.ready(function () {
+      var map = new ymaps.Map('map', {
+        center: [55.751574, 37.573856],
+        zoom: 10,
+      });
 
-  //     // Проверяем наличие кнопки .open-map
-  //     const openMapButton = document.querySelector('.open-map');
-  //     if (openMapButton) {
-  //       openMapButton.addEventListener('click', function () {
-  //         setTimeout(function () {
-  //           map.container.fitToViewport(); // Перестроить карту под новый размер
-  //         }, 300);
-  //       });
-  //     }
+      // Проверяем наличие кнопки .open-map
+      const openMapButton = document.querySelector('.open-map');
+      if (openMapButton) {
+        openMapButton.addEventListener('click', function () {
+          setTimeout(function () {
+            map.container.fitToViewport(); // Перестроить карту под новый размер
+          }, 300);
+        });
+      }
 
-  //     var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
-  //       hintContent: 'Москва',
-  //       balloonContent: 'Столица России',
-  //       controls: [],
-  //     });
+      var myPlacemark = new ymaps.Placemark([55.751574, 37.573856], {
+        hintContent: 'Москва',
+        balloonContent: 'Столица России',
+        controls: [],
+      });
 
-  //     map.geoObjects.add(myPlacemark);
-  //   });
-  // }
+      map.geoObjects.add(myPlacemark);
+    });
+  }
 
   // Функция для изменения размера карты
   function bigMap() {

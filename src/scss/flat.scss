@@ -200,7 +200,7 @@
     position: sticky;
     top: 81px;
     // position: relative;
-    height: 439px;
+    height: 600px;
   }
 
   /* .flat__map */
@@ -221,6 +221,7 @@
   /* .flat__btn */
   &__btn {
     width: 100%;
+    background-color: $whiteColor;
     @include adaptiveValue("height", 67, 45);
 
     span {
@@ -231,14 +232,34 @@
     &_blue {
       margin-bottom: 7px;
       background-color: $masterColor;
+
+      span {
+        color: $whiteColor;
+      }
+
     }
   }
 
   /* .flat__more */
-  &__more {}
+  &__more {
+    padding-top: 110px;
+  }
 
   /* .flat__more-item */
-  &__more-item {}
+  &__more-item {
+    position: relative;
+    padding: 12px;
+    background-color: $whiteColor;
+
+    @include adaptiveValue("border-radius", 20, 10);
+  }
+
+  &__more-slide {}
+
+
+  &__more-title {
+    margin-bottom: 41px;
+  }
 
   /* .flat__pagination */
   &__pagination {}
@@ -247,16 +268,50 @@
   &__more-info {}
 
   /* .flat__more-adress */
-  &__more-adress {}
+  &__more-adress {
+    margin-bottom: 5px;
+
+    font-weight: 600;
+    @include adaptiveValue("font-size", 22, 12);
+  }
 
   /* .flat__more-price */
-  &__more-price {}
+  &__more-price {
+    margin-bottom: 17px;
+
+    font-weight: 600;
+    color: $masterColor;
+    @include adaptiveValue("font-size", 22, 10);
+  }
 
   /* .flat__more-settings */
-  &__more-settings {}
+  &__more-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(0, 0, 0, 0.6);
+
+    margin-bottom: 35px;
+  }
 
   /* .flat__more-btn */
-  &__more-btn {}
+  &__more-btn {
+    width: 100%;
+    background-color: $masterColor;
+    transition: all 0.3s;
+
+    @include adaptiveValue("height", 62, 43);
+
+    span {
+      @include adaptiveValue("font-size", 16, 10);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #5090ee;
+      }
+    }
+  }
 }
 
 .flat-mob-line {
@@ -367,7 +422,18 @@
   &__pagination {}
 }
 
-.flat-catalog-photos {}
+.flat-catalog-photos {
+  max-width: 374px;
+  height: 237px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+
+
+  @include adaptiveValue("border-radius", 10, 4);
+
+}
 
 .svg-fav-null {}
 

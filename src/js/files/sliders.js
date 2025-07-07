@@ -131,6 +131,18 @@ if (document.querySelector('.gallery-thumbs__slider')) { //Указываем к
 	});
 }
 
+if (document.querySelector('.flat-more__slider')) { //Указываем класс нужного слайдера
+	//Создаем слайдер
+	new Swiper('.flat-more__slider', { //Указываем класс нужного слайдера
+		modules: [Navigation, Pagination],
+		spaceBetween: 10,
+		loop: false,
+		slidesPerView: 3,
+		on: {
+		}
+	});
+}
+
 // if (document.querySelector('.item-catalog__photos')) { //Указываем класс нужного слайдера
 // 	//Создаем слайдер
 // 	window.itemPhotos = new Swiper('.item-catalog__photos', { //Указываем класс нужного слайдера

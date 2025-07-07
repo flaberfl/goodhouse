@@ -473,6 +473,10 @@
     .flat__gallery & {
       aspect-ratio: 0;
     }
+
+    .flat__more & {
+      object-fit: fill;
+    }
   }
 }
 

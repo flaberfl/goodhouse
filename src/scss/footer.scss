@@ -5,7 +5,8 @@
   @include adaptiveValue("padding-top", 83, 70);
   @include adaptiveValue("padding-bottom", 62, 41);
 
-  ._catalog & {
+  ._catalog &,
+  ._flat & {
     background-color: #fff;
   }
 
