@@ -339,6 +339,14 @@
 .breadcrumbs {
   @include adaptiveValue("padding-top", 110, 55);
 
+
+  ._flat & {
+
+    @media (max-width: toEm(600)) {
+      display: none;
+    }
+  }
+
   /* .breadcrumbs__container */
   &__container {}
 
@@ -476,6 +484,12 @@
 
     .flat__more & {
       object-fit: fill;
+    }
+
+    .gallery-top__slider & {
+      @media (max-width: toEm(500)) {
+        aspect-ratio: 359 / 198;
+      }
     }
   }
 }

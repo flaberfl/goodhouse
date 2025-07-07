@@ -134,10 +134,25 @@ if (document.querySelector('.gallery-thumbs__slider')) { //Указываем к
 if (document.querySelector('.flat-more__slider')) { //Указываем класс нужного слайдера
 	//Создаем слайдер
 	new Swiper('.flat-more__slider', { //Указываем класс нужного слайдера
-		modules: [Navigation, Pagination],
+		modules: [Navigation],
 		spaceBetween: 10,
 		loop: false,
 		slidesPerView: 3,
+
+		breakpoints: {
+			360: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+		},
 
 		navigation: {
 			nextEl: '.flat-more__swiper-btn.swiper-button-next',
