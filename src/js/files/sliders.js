@@ -25,7 +25,7 @@ import "../../scss/base/swiper.scss";
 // import 'swiper/css';
 
 //Инициализация слайдеров
-function initSliders() {
+// function initSliders() {
 	//Список слайдеров
 	//Проверяем, есть ли слайдер на странице
 	if (document.querySelector('.partners__slider')) { //Указываем класс нужного слайдера
@@ -131,127 +131,72 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.item-catalog__photos')) { //Указываем класс нужного слайдера
-		//Создаем слайдер
-		new Swiper('.item-catalog__photos', { //Указываем класс нужного слайдера
-			modules: [Pagination, Navigation],
-			spaceBetween: 0,
-			observer: true,
-			observeParents: true,
-			// loop: false,
-			// grabCursor: true,
-			slidesPerView: 1,
-
-			pagination: {
-				el: '.swiper-pagination.item-catalog__pagination',
-				clickable: true,
-			},
-			navigation: {
-				nextEl: '.swiper-button-next.item-catalog-next',
-				prevEl: '.swiper-button-prev.item-catalog-prev',
-			},
-
-			on: {
-			}
-		});
-	}
-
-
-
-	// if (document.querySelector('.cooperation__slider')) { //Указываем класс нужного слайдера
+	// if (document.querySelector('.item-catalog__photos')) { //Указываем класс нужного слайдера
 	// 	//Создаем слайдер
-	// 	new Swiper('.cooperation__slider', { //Указываем класс нужного слайдера
-	// 		//Подключаем модули слайдера
-	// 		//для конкретного случая
-	// 		// modules: [Grid],
-	// 		// grid: {
-	// 		// 	rows: 2,
-	// 		// 	fill: "row",
-	// 		// },
-	// 		freeMode: true,
+	// 	window.itemPhotos = new Swiper('.item-catalog__photos', { //Указываем класс нужного слайдера
+	// 		modules: [Pagination, Navigation, Autoplay],
+	// 		spaceBetween: 0,
 	// 		observer: true,
 	// 		observeParents: true,
-	// 		slidesPerView: 'auto',
-	// 		spaceBetween: 10,
-	// 		// autoHeight: true,
-	// 		speed: 800,
-	// 		clickable: true,
-	// 		//touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		// loop: true,
-	// 		//preloadImages: false,
-	// 		// lazy: true,
-	// 		// centeredSlides: true,
-
-	// 		// Брейкпоинты
-	// 		breakpoints: {
-	// 			390: {
-	// 				slidesPerView: 1.2,
-	// 				spaceBetween: 16,
-	// 				// autoHeight: true,
-	// 			},
-	// 			640: {
-	// 				slidesPerView: 2,
-	// 				spaceBetween: 16,
-	// 				// centeredSlides: true,
-	// 				// loop: true 
-
-	// 			},
-	// 			768: {
-	// 				slidesPerView: 3,
-	// 				spaceBetween: 16,
-	// 			},
-	// 			992: {
-	// 				slidesPerView: 4,
-	// 				spaceBetween: 10,
-	// 			},
-	// 			1440: {
-	// 				slidesPerView: 5,
-	// 				spaceBetween: 10,
-	// 			},
+	// 		loop: true,
+	// 		slidesPerView: 1,
+	// 		autoplay: {
+	// 			delay: 1000,
+	// 			disableOnInteraction: false,
 	// 		},
 
-	// 		// События
-	// 		on: {
-
-	// 		}
+	// 		pagination: {
+	// 			el: '.swiper-pagination.item-catalog__pagination',
+	// 			clickable: true,
+	// 		},
+	// 		navigation: {
+	// 			nextEl: '.swiper-button-next.item-catalog-next',
+	// 			prevEl: '.swiper-button-prev.item-catalog-prev',
+	// 		},
 
 	// 	});
 	// }
 
-}
-//Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
-}
 
-window.addEventListener("load", function (e) {
-	// Запуск инициализации слайдеров
-	initSliders();
-	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
+
+	const sliderElements = document.querySelectorAll('.item-catalog__photos');
+
+// Перебираем каждый элемент и добавляем обработчики событий
+sliderElements.forEach(sliderElement => {
+  // Предполагается, что itemPhotos — это массив или объект, содержащий экземпляры Swiper
+  const itemPhotos = new Swiper(sliderElement, {
+    modules: [Pagination, Navigation, Autoplay],
+    spaceBetween: 0,
+    observer: true,
+    observeParents: true,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: sliderElement.querySelector('.swiper-pagination.item-catalog__pagination'),
+      clickable: true,
+    },
+    navigation: {
+      nextEl: sliderElement.querySelector('.swiper-button-next.item-catalog-next'),
+      prevEl: sliderElement.querySelector('.swiper-button-prev.item-catalog-prev'),
+    },
+    on: {},
+  });
+
+  // Останавливаем автопрокрутку при загрузке страницы
+  itemPhotos.autoplay.stop();
+
+  // Добавляем обработчик для события mouseenter
+  sliderElement.addEventListener('mouseenter', () => {
+    itemPhotos.autoplay.start();
+  });
+
+  // Добавляем обработчик для события mouseleave
+  sliderElement.addEventListener('mouseleave', () => {
+    itemPhotos.autoplay.stop();
+  });
 });
+

@@ -202,6 +202,24 @@ document.body.addEventListener('click', (event) => {
 });
 
 
+// Находим элемент, на котором нужно отслеживать события (например, контейнер слайдера)
+
+// const sliderElement = document.querySelectorAll('.item-catalog__photos'); // Замените селектор на нужный
+// window.itemPhotos.autoplay.stop();
+// sliderElements.forEach(sliderElement => {
+//   // Добавляем обработчик для события mouseenter
+//   sliderElement.addEventListener('mouseenter', () => {
+//     window.itemPhotos.autoplay.start();
+//   });
+
+//   // Добавляем обработчик для события mouseleave
+//   sliderElement.addEventListener('mouseleave', () => {
+//     window.itemPhotos.autoplay.stop();
+//   });
+// }
+
+
+
 
 
 
