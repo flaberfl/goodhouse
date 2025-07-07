@@ -222,7 +222,9 @@
   &__btn {
     width: 100%;
     background-color: $whiteColor;
+    transition: all 0.3s;
     @include adaptiveValue("height", 67, 45);
+
 
     span {
       color: $masterColor;
@@ -230,8 +232,15 @@
     }
 
     &_blue {
+
       margin-bottom: 7px;
       background-color: $masterColor;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #5090ee;
+        }
+      }
 
       span {
         color: $whiteColor;
@@ -262,7 +271,10 @@
   }
 
   /* .flat__pagination */
-  &__pagination {}
+  &__pagination {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
   /* .flat__more-info */
   &__more-info {}
@@ -296,6 +308,8 @@
 
   /* .flat__more-btn */
   &__more-btn {
+    position: relative;
+    z-index: 100;
     width: 100%;
     background-color: $masterColor;
     transition: all 0.3s;
@@ -334,9 +348,24 @@
 
 .gallery-top {
 
+
   /* .gallery-top__slider */
   &__slider {
+    transition: opacity 0.3s;
+
     border-radius: 6px;
+    position: relative;
+
+    @media (any-hover: hover) {
+      &:hover {
+
+        .gallery-arrow.swiper-button-prev,
+        .gallery-arrow.swiper-button-next {
+          opacity: 1;
+        }
+      }
+    }
+
   }
 
   /* .gallery-top__wrapper */
@@ -395,7 +424,9 @@
 .flat-more {
 
   /* .flat-more__slider */
-  &__slider {}
+  &__slider {
+    position: relative;
+  }
 
   /* .flat-more__wrapper */
   &__wrapper {}
@@ -404,22 +435,10 @@
   &__slide {}
 
   /* .flat-more__swiper-btn */
-  &__swiper-btn {}
-}
-
-.item-catalog {
-
-  /* .item-catalog__link */
-  &__link {}
-
-  /* .item-catalog__photos */
-  &__photos {}
-
-  /* .item-catalog__favorite */
-  &__favorite {}
-
-  /* .item-catalog__pagination */
-  &__pagination {}
+  &__swiper-btn {
+    opacity: 1;
+    z-index: 100;
+  }
 }
 
 .flat-catalog-photos {
@@ -430,13 +449,14 @@
   position: relative;
   margin-bottom: 16px;
 
-
   @include adaptiveValue("border-radius", 10, 4);
 
+  @media (any-hover: hover) {
+    &:hover {
+      .flat__pagination {
+        opacity: 1;
+      }
+    }
+  }
+
 }
-
-.svg-fav-null {}
-
-.svg-fav-path {}
-
-.svg-fav-fill {}

@@ -138,6 +138,11 @@ if (document.querySelector('.flat-more__slider')) { //Указываем кла�
 		spaceBetween: 10,
 		loop: false,
 		slidesPerView: 3,
+
+		navigation: {
+			nextEl: '.flat-more__swiper-btn.swiper-button-next',
+			prevEl: '.flat-more__swiper-btn.swiper-button-prev',
+		},
 		on: {
 		}
 	});
