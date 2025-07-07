@@ -100,6 +100,7 @@ $(function () {
     });
   }
 
+
   // Проверяем наличие кнопки .filter-open
   let filterOpenButton = $('.filter-open');
   if (filterOpenButton.length > 0) {
