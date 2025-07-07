@@ -143,7 +143,7 @@ function initSliders() {
 			slidesPerView: 1,
 
 			pagination: {
-				el: '._catalog .swiper-pagination.item-catalog__pagination',
+				el: '.swiper-pagination.item-catalog__pagination',
 				clickable: true,
 			},
 			navigation: {
