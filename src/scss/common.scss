@@ -571,3 +571,10 @@
 .flat-more__swiper-btn.swiper-button-next {
   right: -50px;
 }
+
+.swiper.item-catalog__photos {
+  @media (max-width:$mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
