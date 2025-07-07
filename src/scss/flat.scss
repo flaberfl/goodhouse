@@ -119,7 +119,9 @@
   }
 
   /* .flat__equipment */
-  &__equipment {}
+  &__equipment {
+    margin-bottom: 50px;
+  }
 
   /* .flat__equipment-title */
   &__equipment-title {
@@ -159,11 +161,40 @@
   /* .flat__rules */
   &__rules {}
 
+  &__rules-title {
+    margin-bottom: 34px;
+  }
+
   /* .flat__rules-list */
-  &__rules-list {}
+  &__rules-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px 25px;
+    width: 100%;
+  }
 
   /* .flat__rules-item */
-  &__rules-item {}
+  &__rules-item {
+    display: flex;
+    width: 35.4%;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #EDEDED;
+  }
+
+  &__rules-name {
+    font-weight: 400;
+    color: rgba(5, 5, 5, 0.6);
+
+    @include adaptiveValue("font-size", 14, 10);
+  }
+
+  &__rules-value {
+    font-weight: 400;
+    color: rgba(5, 5, 5, 0.8);
+
+    @include adaptiveValue("font-size", 14, 10);
+  }
 
   /* .flat__map */
   &__map {}
