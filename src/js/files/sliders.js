@@ -120,7 +120,7 @@ if (document.querySelector('.gallery-thumbs__slider')) { //Указываем к
 	//Создаем слайдер
 	new Swiper('.gallery-thumbs__slider', { //Указываем класс нужного слайдера
 		modules: [Thumbs],
-		spaceBetween: 7,
+		spaceBetween: 9,
 		loop: false,
 		grabCursor: true,
 		slidesPerView: 5,

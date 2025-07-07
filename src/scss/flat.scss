@@ -1,0 +1,195 @@
+.flat {
+  @include adaptiveValue("padding-top", 20, 6);
+
+  /* .flat__container */
+  &__container {}
+
+  /* .flat__row */
+  &__row {
+    display: grid;
+    grid-template-columns: 57.6% auto;
+    @include adaptiveValue("gap", 40, 1);
+  }
+
+  /* .flat__content */
+  &__content {}
+
+  /* .flat__gallery */
+  &__gallery {}
+
+  /* .flat__info */
+  &__info {}
+
+  /* .flat__adress */
+  &__adress {}
+
+  /* .flat__price */
+  &__price {}
+
+  /* .flat__settings */
+  &__settings {}
+
+  /* .flat__setting */
+  &__setting {}
+
+  /* .flat__text-wrapper */
+  &__text-wrapper {}
+
+  /* .flat__text-content */
+  &__text-content {}
+
+  /* .flat__text */
+  &__text {}
+
+  /* .flat__equipment */
+  &__equipment {}
+
+  /* .flat__equipment-title */
+  &__equipment-title {}
+
+  /* .flat__equipment-list */
+  &__equipment-list {}
+
+  /* .flat__rules */
+  &__rules {}
+
+  /* .flat__rules-list */
+  &__rules-list {}
+
+  /* .flat__rules-item */
+  &__rules-item {}
+
+  /* .flat__map */
+  &__map {}
+
+  /* .flat__btn */
+  &__btn {}
+
+  /* .flat__more */
+  &__more {}
+
+  /* .flat__more-item */
+  &__more-item {}
+
+  /* .flat__pagination */
+  &__pagination {}
+
+  /* .flat__more-info */
+  &__more-info {}
+
+  /* .flat__more-adress */
+  &__more-adress {}
+
+  /* .flat__more-price */
+  &__more-price {}
+
+  /* .flat__more-settings */
+  &__more-settings {}
+
+  /* .flat__more-btn */
+  &__more-btn {}
+}
+
+.flat-mob-line {
+  display: none;
+}
+
+.swiper {}
+
+.gallery-top {
+
+  /* .gallery-top__slider */
+  &__slider {
+    border-radius: 6px;
+  }
+
+  /* .gallery-top__wrapper */
+  &__wrapper {}
+
+  /* .gallery-top__slide */
+  &__slide {}
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.gallery-arrow {}
+
+.gallery-prev {}
+
+.swiper-button-next {}
+
+.gallery-next {}
+
+.gallery-thumbs {
+
+  /* .gallery-thumbs__slider */
+  &__slider {
+    margin-top: 10px;
+
+    // border-radius: 6px;
+
+  }
+}
+
+.gallery-thumb {
+
+  /* .gallery-thumb__wrapper */
+  &__wrapper {}
+}
+
+.gallery-thumbs-slide {
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    aspect-ratio: 133 / 105;
+  }
+}
+
+.read-more-btn {}
+
+.btn {}
+
+.flat-more {
+
+  /* .flat-more__slider */
+  &__slider {}
+
+  /* .flat-more__wrapper */
+  &__wrapper {}
+
+  /* .flat-more__slide */
+  &__slide {}
+
+  /* .flat-more__swiper-btn */
+  &__swiper-btn {}
+}
+
+.item-catalog {
+
+  /* .item-catalog__link */
+  &__link {}
+
+  /* .item-catalog__photos */
+  &__photos {}
+
+  /* .item-catalog__favorite */
+  &__favorite {}
+
+  /* .item-catalog__pagination */
+  &__pagination {}
+}
+
+.flat-catalog-photos {}
+
+.svg-fav-null {}
+
+.svg-fav-path {}
+
+.svg-fav-fill {}
