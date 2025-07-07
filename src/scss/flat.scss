@@ -18,10 +18,17 @@
   &__gallery {}
 
   /* .flat__info */
-  &__info {}
+  &__info {
+    .item-catalog__favorite {
+      display: block;
+      position: relative;
+    }
+  }
 
   /* .flat__adress */
-  &__adress {}
+  &__adress {
+    display: flex;
+  }
 
   /* .flat__price */
   &__price {}
