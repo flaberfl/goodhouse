@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, Grid, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, Grid, Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -18,9 +18,9 @@ EffectFade, Lazy, Manipulation
 
 //Стили Swiper
 //Базовые стили
-// import "../../scss/base/swiper.scss";
+import "../../scss/base/swiper.scss";
 //Полный набор стилей с scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
+// import "../../scss/libs/swiper.scss";
 //Полный набор стилей с node_modules
 // import 'swiper/css';
 
@@ -126,6 +126,31 @@ function initSliders() {
 			slidesPerView: 5,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
+			on: {
+			}
+		});
+	}
+
+	if (document.querySelector('.item-catalog__photos')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.item-catalog__photos', { //Указываем класс нужного слайдера
+			modules: [Pagination, Navigation],
+			spaceBetween: 0,
+			observer: true,
+			observeParents: true,
+			// loop: false,
+			// grabCursor: true,
+			slidesPerView: 1,
+
+			pagination: {
+				el: '._catalog .swiper-pagination.item-catalog__pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next.item-catalog-next',
+				prevEl: '.swiper-button-prev.item-catalog-prev',
+			},
+
 			on: {
 			}
 		});

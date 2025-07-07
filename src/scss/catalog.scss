@@ -227,13 +227,15 @@
     gap: 5px;
     z-index: 2;
     cursor: pointer;
+    left: 50%;
+    transform: translate(-50%, 0px);
 
-    ._catalog & {
-      left: 50%;
-      transform: translate(-50%, 0px);
 
+    ._big-map & {
+      transform: translate(-50%, 0px) !important;
     }
 
+    ._catalog & {}
   }
 
   /* .item-catalog__bages */
