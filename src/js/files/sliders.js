@@ -162,6 +162,39 @@ if (document.querySelector('.flat-more__slider')) { //Указываем кла�
 	});
 }
 
+if (document.querySelector('.partners__slider')) { //Указываем класс нужного слайдера
+	//Создаем слайдер
+	new Swiper('.partners__slider', { //Указываем класс нужного слайдера
+		spaceBetween: 20,
+		// loop: true,
+		slidesPerView: 5,
+		observer: true,
+		observeParents: true,
+
+		breakpoints: {
+			360: {
+				slidesPerView: 2.5,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 5,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 5,
+				spaceBetween: 20,
+			},
+		},
+
+		navigation: {
+			nextEl: '.flat-more__swiper-btn.swiper-button-next',
+			prevEl: '.flat-more__swiper-btn.swiper-button-prev',
+		},
+		on: {
+		}
+	});
+}
+
 // if (document.querySelector('.item-catalog__photos')) { //Указываем класс нужного слайдера
 // 	//Создаем слайдер
 // 	window.itemPhotos = new Swiper('.item-catalog__photos', { //Указываем класс нужного слайдера

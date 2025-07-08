@@ -15,9 +15,9 @@
 	/* .partners__slider */
 	&__slider {
 
-		@media (max-width:$mobile) {
-			// overflow: visible !important;
-		}
+		overflow: visible !important;
+
+		@media (max-width:$mobile) {}
 	}
 
 	/* .partners__wrapper */
