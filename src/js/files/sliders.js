@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 //Стили Swiper
 //Базовые стили
 import "../../scss/base/swiper.scss";
-//Полный набор стилей с scss/libs/swiper.scss
+// Полный набор стилей с scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
 //Полный набор стилей с node_modules
 // import 'swiper/css';
@@ -84,7 +84,6 @@ if (document.querySelector('.partners__slider')) { //Указываем клас
 
 	});
 }
-
 
 if (document.querySelector('.gallery-top__slider')) { //Указываем класс нужного слайдера
 	//Создаем слайдер
@@ -233,39 +232,43 @@ sliderElements.forEach(sliderElement => {
 	});
 });
 
-// const sliders = [];
 
-// document.querySelectorAll('.item-catalog__photos').forEach((sliderElement, index) => {
-// 	const itemPhotos = new Swiper(sliderElement, {
-// 		modules: [Pagination, Navigation, Autoplay],
-// 		spaceBetween: 0,
+// if (document.querySelector('.cooperation__slider')) { //Указываем класс нужного слайдера
+// 	//Создаем слайдер
+// 	new Swiper('.cooperation__slider', { //Указываем класс нужного слайдера
 // 		observer: true,
 // 		observeParents: true,
-// 		loop: true,
-// 		slidesPerView: 1,
-// 		autoplay: {
-// 			delay: 1000,
-// 			disableOnInteraction: false,
+// 		spaceBetween: 10,
+// 		loop: false,
+// 		// grabCursor: true,
+// 		// watchSlidesVisibility: true,
+// 		// loopedSlides: 5,
+// 		breakpoints: {
+// 			390: {
+// 				slidesPerView: 2.5,
+// 				spaceBetween: 10,
+// 				// autoHeight: true,
+// 			},
+// 			640: {
+// 				slidesPerView: 3.5,
+// 				spaceBetween: 10,
+// 			},
+// 			768: {
+// 				slidesPerView: 4.5,
+// 				spaceBetween: 10,
+// 			},
+// 			992: {
+// 				slidesPerView: 5.5,
+// 				spaceBetween: 20,
+// 			},
+// 			1440: {
+// 				slidesPerView: 5.5,
+// 				spaceBetween: 20,
+// 			},
 // 		},
-// 		pagination: {
-// 			el: sliderElement.querySelector('.swiper-pagination'),
-// 			clickable: true,
-// 		},
-// 		navigation: {
-// 			nextEl: sliderElement.querySelector('.swiper-button-next'),
-// 			prevEl: sliderElement.querySelector('.swiper-button-prev'),
-// 		},
-// 		on: {},
-// 	});
+// 		// События
+// 		on: {
+// 		}
 
-// 	sliders.push(itemPhotos);
-// 	itemPhotos.autoplay.stop();
-
-// 	sliderElement.addEventListener('mouseenter', () => {
-// 		itemPhotos.autoplay.start();
 // 	});
-
-// 	sliderElement.addEventListener('mouseleave', () => {
-// 		itemPhotos.autoplay.stop();
-// 	});
-// });
+// }

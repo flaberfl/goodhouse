@@ -134,6 +134,13 @@
 }
 
 
+.intro .filter-checkboxes-list .filter-checkbox span {
+  @media (max-width:$mobile) {
+    padding: 6px 8px;
+  }
+}
+
+
 .filter-checkboxes {
   display: flex;
   padding: 0 12px;
