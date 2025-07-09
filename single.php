@@ -1,4 +1,27 @@
 <main class="page">
+
+
+	    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            // Получаем данные о квартире из ACF
+            $gallery = get_field('gallery'); // Галерея фотографий
+            $address = get_field('address'); // Адрес
+            $price = get_field('price'); // Стоимость
+            $roomNumber = get_field('room-number'); // Количество комнат
+			      $bedsNumber = get_field('beds-number'); // Количество кроватей
+			      $flatSq = get_field('flat-sq'); // Площадь квартиры
+			      $flatFloor = get_field('flat-floor'); // Этажность квартиры
+			       $description = get_field('description'); // Описание
+             $equipment = get_field('flat-equipment'); // Оснащение квартиры
+            $flatRules = get_field('flat-rules'); // Правила квартиры
+            $latitude = get_field('latitude'); // Широта
+            $longitude = get_field('longitude'); // Долгота
+            ?>
+
+
+
+
   <div class="breadcrumbs">
     <nav class="breadcrumbs__container">
       <ul class="breadcrumbs__list">
