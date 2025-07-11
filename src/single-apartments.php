@@ -1,0 +1,383 @@
+<?php
+
+/**
+ * Template Name: Страница квартиры
+ **/
+
+
+get_header('flat'); ?>
+
+
+
+<main class="page">
+
+  <div class="breadcrumbs">
+    <nav class="breadcrumbs__container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item breadcrumbs__item_active"><a href="">Главная <span>/</span>&nbsp;</a></li>
+        <li class="breadcrumbs__item breadcrumbs__item_active"><a href="">Снять квартиру в Екатеринбурге
+            <span>/</span>&nbsp;</a></li>
+        <li class="breadcrumbs__item"><?php the_title(); ?></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <script src=" https://api-maps.yandex.ru/2.1/?apikey=e3e9c1e9-ed50-437e-8bac-fef79d59faf9&lang=ru_RU&_v=20250708011840" defer></script>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mapElement = document.getElementById("map");
+      if (mapElement) ymaps.ready(function() {
+        let coordinates = [<?= get_field('geoposition') ?>];
+        console.log(coordinates);
+        const map = new ymaps.Map("map", {
+          center: coordinates,
+          zoom: 17
+        });
+        const openMapButton = document.querySelector(".open-map");
+        if (openMapButton) openMapButton.addEventListener("click", function() {
+          setTimeout(function() {
+            map.container.fitToViewport();
+          }, 300);
+        });
+        const myPlacemark = new ymaps.Placemark(coordinates, {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '/wp-content/uploads/2025/07/chmap.svg',
+          iconImageSize: [18, 18],
+          iconImageOffset: [-9, -9]
+
+        });
+        map.geoObjects.add(myPlacemark);
+      });
+
+      function bigMap() {
+        document.querySelectorAll(".catalog__row, .catalog__map, .catalog__list, .catalog__item").forEach(function(element) {
+          element.classList.toggle("big-map");
+        });
+        const openMapSpans = document.querySelectorAll(".open-map span");
+        const openMapSvgs = document.querySelectorAll(".open-map svg");
+        openMapSpans.forEach(function(span) {
+          span.style.display = span.style.display === "none" ? "" : "none";
+        });
+        openMapSvgs.forEach(function(svg) {
+          svg.style.display = svg.style.display === "none" ? "" : "none";
+        });
+      }
+      const openMapButton2 = document.querySelector(".open-map");
+      if (openMapButton2) openMapButton2.addEventListener("click", function() {
+        bigMap();
+      });
+
+
+
+      const textWrapper = document.querySelector(".flat__text-content");
+      const readMoreButton = document.querySelector(".read-more-btn");
+
+      readMoreButton.addEventListener("click", () => {
+        textWrapper.classList.add("open");
+        readMoreButton.style.display = "none";
+      });
+    });
+  </script>
+
+  <section class="flat">
+    <div class="flat__container">
+      <div class="flat-mob-line">
+        <a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3403 3.64645C10.5532 3.84171 10.5532 4.15829 10.3403 4.35355L6.75 7.64645C6.5371 7.84171 6.5371 8.15829 6.75 8.35355L10.3403 11.6464C10.5532 11.8417 10.5532 12.1583 10.3403 12.3536C10.1274 12.5488 9.78225 12.5488 9.56935 12.3536L5.97902 9.06066C5.34033 8.47487 5.34032 7.52513 5.97902 6.93934L9.56935 3.64645C9.78225 3.45118 10.1274 3.45118 10.3403 3.64645Z" fill="#116CF0" />
+          </svg>
+          В каталог
+        </a>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.25 12H8.895M4.534 12H2.75M4.534 12C4.534 11.4218 4.76368 10.8673 5.17251 10.4585C5.58134 10.0497 6.13583 9.82001 6.714 9.82001C7.29217 9.82001 7.84666 10.0497 8.25549 10.4585C8.66432 10.8673 8.894 11.4218 8.894 12C8.894 12.5782 8.66432 13.1327 8.25549 13.5415C7.84666 13.9503 7.29217 14.18 6.714 14.18C6.13583 14.18 5.58134 13.9503 5.17251 13.5415C4.76368 13.1327 4.534 12.5782 4.534 12ZM21.25 18.607H15.502M15.502 18.607C15.502 19.1853 15.2718 19.7404 14.8628 20.1494C14.4539 20.5583 13.8993 20.788 13.321 20.788C12.7428 20.788 12.1883 20.5573 11.7795 20.1485C11.3707 19.7397 11.141 19.1852 11.141 18.607M15.502 18.607C15.502 18.0287 15.2718 17.4746 14.8628 17.0657C14.4539 16.6567 13.8993 16.427 13.321 16.427C12.7428 16.427 12.1883 16.6567 11.7795 17.0655C11.3707 17.4743 11.141 18.0288 11.141 18.607M11.141 18.607H2.75M21.25 5.39301H18.145M13.784 5.39301H2.75M13.784 5.39301C13.784 4.81484 14.0137 4.26035 14.4225 3.85152C14.8313 3.44269 15.3858 3.21301 15.964 3.21301C16.2503 3.21301 16.5338 3.2694 16.7983 3.37896C17.0627 3.48851 17.3031 3.64909 17.5055 3.85152C17.7079 4.05395 17.8685 4.29427 17.9781 4.55876C18.0876 4.82325 18.144 5.10673 18.144 5.39301C18.144 5.67929 18.0876 5.96277 17.9781 6.22726C17.8685 6.49175 17.7079 6.73207 17.5055 6.93451C17.3031 7.13694 17.0627 7.29751 16.7983 7.40707C16.5338 7.51663 16.2503 7.57301 15.964 7.57301C15.3858 7.57301 14.8313 7.34333 14.4225 6.93451C14.0137 6.52568 13.784 5.97118 13.784 5.39301Z" stroke="#116CF0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="flat__row">
+        <div class="flat__content">
+
+          <?php if (have_rows('gallery')): ?>
+            <div class="flat__gallery">
+
+              <div class="swiper gallery-top__slider">
+
+                <div class="swiper-wrapper gallery-top__wrapper">
+
+                  <?php while (have_rows('gallery')): the_row();
+
+                    // переменные
+                    $image = get_sub_field('photo');
+
+                  ?>
+                    <div class="swiper-slide gallery-top-slide">
+                      <?php if ($image): ?>
+
+                        <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+
+                      <?php endif; ?>
+                    </div>
+                  <?php endwhile; ?>
+
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <button class="swiper-button-prev gallery-arrow gallery-prev">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9421 6.26017H4.12231L7.32286 3.24789L6.46785 2.44318L1.80762 6.82927L6.46785 11.2154L7.32286 10.4107L4.12231 7.39838H12.9421V6.26017Z" fill="#116CF0" />
+                  </svg>
+                </button>
+                <button class="swiper-button-next gallery-arrow gallery-next">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.0579 6.3577H10.8777L7.67714 3.34543L8.53215 2.54071L13.1924 6.92681L8.53215 11.3129L7.67714 10.5082L10.8777 7.49591H2.0579V6.3577Z" fill="#116CF0" />
+                  </svg>
+                </button>
+              </div>
+
+
+              <div class="swiper gallery-thumbs__slider">
+                <div class="swiper-wrapper gallery-thumb__wrapper">
+
+                  <?php while (have_rows('gallery')): the_row();
+
+                    // переменные
+                    $image = get_sub_field('photo');
+
+                  ?>
+                    <div class="swiper-slide gallery-thumbs-slide">
+                      <?php if ($image): ?>
+                        <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                      <?php endif; ?>
+                    </div>
+                  <?php endwhile; ?>
+
+
+                </div>
+
+              </div>
+
+            </div>
+          <?php endif; ?>
+
+
+          <div class="flat__info">
+
+            <div class="flat__adress flat-title"><span><?php the_title(); ?></span>
+
+              <div class="item-catalog__favorite">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 6.875L14.325 7.525C14.4125 7.61573 14.5173 7.6879 14.6333 7.7372C14.7493 7.78649 14.874 7.8119 15 7.8119C15.126 7.8119 15.2507 7.78649 15.3667 7.7372C15.4827 7.6879 15.5875 7.61573 15.675 7.525L15 6.875ZM11.7825 22.9025C9.8875 21.4087 7.81625 19.95 6.1725 18.1C4.5625 16.285 3.4375 14.1687 3.4375 11.4212H1.5625C1.5625 14.7537 2.95 17.2962 4.77125 19.345C6.55875 21.3575 8.83875 22.97 10.6213 24.375L11.7825 22.9025ZM3.4375 11.4212C3.4375 8.73375 4.95625 6.47875 7.03 5.53C9.045 4.60875 11.7525 4.8525 14.325 7.525L15.675 6.22625C12.625 3.055 9.08 2.53125 6.25 3.825C3.4825 5.09125 1.5625 8.03125 1.5625 11.4212H3.4375ZM10.6213 24.375C11.2625 24.88 11.95 25.4175 12.6462 25.825C13.3425 26.2325 14.1375 26.5625 15 26.5625V24.6875C14.6125 24.6875 14.1575 24.5375 13.5925 24.2062C13.0262 23.8762 12.44 23.4212 11.7825 22.9025L10.6213 24.375ZM19.3787 24.375C21.1613 22.9687 23.4412 21.3587 25.2288 19.345C27.05 17.295 28.4375 14.7537 28.4375 11.4212H26.5625C26.5625 14.1687 25.4375 16.285 23.8275 18.1C22.1838 19.95 20.1125 21.4087 18.2175 22.9025L19.3787 24.375ZM28.4375 11.4212C28.4375 8.03125 26.5187 5.09125 23.75 3.825C20.92 2.53125 17.3775 3.055 14.325 6.225L15.675 7.525C18.2475 4.85375 20.955 4.60875 22.97 5.53C25.0437 6.47875 26.5625 8.7325 26.5625 11.4212H28.4375ZM18.2175 22.9025C17.56 23.4212 16.9738 23.8762 16.4075 24.2062C15.8413 24.5362 15.3875 24.6875 15 24.6875V26.5625C15.8625 26.5625 16.6575 26.2312 17.3538 25.825C18.0513 25.4175 18.7375 24.88 19.3787 24.375L18.2175 22.9025Z" fill="#116CF0" />
+                </svg>
+
+                <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z" fill="white" />
+                </svg>
+
+                <svg class="svg-fav-fill" width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z" fill="#116CF0" />
+                </svg>
+
+              </div>
+            </div>
+
+
+            <div class="flat__price"><?php the_field('price'); ?> ₽ за сутки</div>
+
+            <div class="item-catalog__desc">
+              <span class="item-desc item-flat"><?php the_field('beds-number'); ?> кровати</span>
+              <span class="item-desc item-beds"><?php the_field('flat-sq'); ?> м²</span>
+              <span class="item-desc item-sq"><?php the_field('flat-floor'); ?> этаж</span>
+            </div>
+
+
+
+            <div class="flat__text-wrapper">
+              <div class="flat__text-content">
+                <div class="flat__mobile-title flat-title">О квартире</div>
+                <div class="flat__text">
+                  <?php the_field('description'); ?>
+                </div>
+              </div>
+              <button class="flat__read-more read-more-btn">Узнать больше
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 8L10.5 12.5L15 8" stroke="#116CF0" stroke-width="1.5" />
+                </svg>
+              </button>
+            </div>
+
+
+
+            <?php if (have_rows('flat-equipment')): ?>
+              <div class="flat__equipment">
+                <div class="flat__equipment-title flat-title">Оснащение квартиры</div>
+                <div class="flat__equipment-list">
+
+                  <?php while (have_rows('flat-equipment')): the_row();
+
+                    $icon = get_sub_field('flat-equipment-icon');
+                    $name = get_sub_field('flat-equipment-name');
+
+                  ?>
+
+                    <div class="flat__equipment-item">
+                      <div class="flat__equipment__icon">
+                        <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
+                      </div>
+                      <div class="flat__equipment-name">
+                        <?= $name ?>
+                      </div>
+                    </div>
+                  <?php endwhile; ?>
+                </div>
+              </div>
+            <?php endif; ?>
+
+
+            <?php if (have_rows('flat-rules')): ?>
+              <div class="flat__rules">
+                <div class="flat__rules-title flat-title">Правила</div>
+                <div class="flat__rules-list">
+
+                  <?php while (have_rows('flat-rules')): the_row();
+
+                    $name = get_sub_field('flat-rules-name');
+                    $value = get_sub_field('flat-rules-value');
+
+                  ?>
+
+                    <div class="flat__rules-item">
+                      <div class="flat__rules-name"> <?= $name ?></div>
+                      <div class="flat__rules-value"> <?= $value ?></div>
+                    </div>
+
+                  <?php endwhile; ?>
+
+                </div>
+              </div>
+
+            <?php endif; ?>
+
+
+          </div>
+        </div>
+        <div class="flat__geo">
+          <div class="flat__map">
+            <div id="map"></div>
+
+
+            <?php if (get_field('link-bron')): ?>
+              <a data-da=".flat__info, 767, 3" href="<?php the_field('link-bron') ?>" class="flat__btn flat__btn_blue btn">
+                <span>Забронировать</span>
+              </a>
+            <?php else: ?>
+              <button data-da=".flat__info, 767, 3" class="flat__btn flat__btn_blue btn">
+                <span>Забронировать</span>
+              </button>
+            <?php endif; ?>
+
+            <a data-da=".flat__info, 767, 4" href="" class="flat__btn btn"><span>+7 929 216-30-30</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flat__more flat-more">
+        <div class="flat__more-title flat-title">Похожие объекты</div>
+        <div class="flat-more__slider-wrapper">
+
+          <?php $related_posts = get_field('flat-more'); ?>
+          <?php if ($related_posts): ?>
+            <div class="flat-more__slider swiper">
+              <div class="flat__more-wrapper swiper-wrapper">
+                <?php foreach ($related_posts as $post): ?>
+                  <div class="flat__more-slide swiper-slide">
+                    <div class="flat__more-item">
+                      <a href="<?= get_permalink($post->ID) ?>" class="item-catalog__link"></a>
+                      <?php if (have_rows('gallery')): ?>
+                        <div class="swiper item-catalog__photos flat-catalog-photos">
+                          <div class="swiper-wrapper">
+                            <?php while (have_rows('gallery')) : the_row();
+                              $image = get_sub_field('photo');
+                            ?>
+                              <div class="swiper-slide">
+                                <img data-src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                              </div>
+                            <?php endwhile; ?>
+                          </div>
+
+
+
+                          <div class="item-catalog__favorite">
+                            <svg class="svg-fav-null" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 7.37501L14.325 8.02501C14.4125 8.11575 14.5173 8.18792 14.6333 8.23721C14.7493 8.28651 14.874 8.31191 15 8.31191C15.126 8.31191 15.2507 8.28651 15.3667 8.23721C15.4827 8.18792 15.5875 8.11575 15.675 8.02501L15 7.37501ZM11.7825 23.4025C9.8875 21.9088 7.81625 20.45 6.1725 18.6C4.5625 16.785 3.4375 14.6688 3.4375 11.9213H1.5625C1.5625 15.2538 2.95 17.7963 4.77125 19.845C6.55875 21.8575 8.83875 23.47 10.6213 24.875L11.7825 23.4025ZM3.4375 11.9213C3.4375 9.23376 4.95625 6.97876 7.03 6.03001C9.045 5.10876 11.7525 5.35251 14.325 8.02501L15.675 6.72626C12.625 3.55501 9.08 3.03126 6.25 4.32501C3.4825 5.59126 1.5625 8.53126 1.5625 11.9213H3.4375ZM10.6213 24.875C11.2625 25.38 11.95 25.9175 12.6462 26.325C13.3425 26.7325 14.1375 27.0625 15 27.0625V25.1875C14.6125 25.1875 14.1575 25.0375 13.5925 24.7063C13.0262 24.3763 12.44 23.9213 11.7825 23.4025L10.6213 24.875ZM19.3787 24.875C21.1613 23.4688 23.4412 21.8588 25.2288 19.845C27.05 17.795 28.4375 15.2538 28.4375 11.9213H26.5625C26.5625 14.6688 25.4375 16.785 23.8275 18.6C22.1838 20.45 20.1125 21.9088 18.2175 23.4025L19.3787 24.875ZM28.4375 11.9213C28.4375 8.53126 26.5187 5.59126 23.75 4.32501C20.92 3.03126 17.3775 3.55501 14.325 6.72501L15.675 8.02501C18.2475 5.35376 20.955 5.10876 22.97 6.03001C25.0437 6.97876 26.5625 9.23251 26.5625 11.9213H28.4375ZM18.2175 23.4025C17.56 23.9213 16.9738 24.3763 16.4075 24.7063C15.8413 25.0363 15.3875 25.1875 15 25.1875V27.0625C15.8625 27.0625 16.6575 26.7313 17.3538 26.325C18.0513 25.9175 18.7375 25.38 19.3787 24.875L18.2175 23.4025Z" fill="white" />
+                            </svg>
+
+
+                            <svg class="svg-fav-path" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.5 11.4212C2.5 17.5 7.525 20.7387 11.2025 23.6387C12.5 24.6612 13.75 25.625 15 25.625C16.25 25.625 17.5 24.6625 18.7975 23.6375C22.4762 20.74 27.5 17.5 27.5 11.4225C27.5 5.34499 20.625 1.03124 15 6.87624C9.375 1.03124 2.5 5.34249 2.5 11.4212Z" fill="white" />
+                            </svg>
+
+                            <svg class="svg-fav-fill" width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.5 7.42124C0.5 13.5 5.525 16.7387 9.2025 19.6387C10.5 20.6612 11.75 21.625 13 21.625C14.25 21.625 15.5 20.6625 16.7975 19.6375C20.4762 16.74 25.5 13.5 25.5 7.42249C25.5 1.34499 18.625 -2.96876 13 2.87624C7.375 -2.96876 0.5 1.34249 0.5 7.42124Z" fill="#116CF0" />
+                            </svg>
+
+                          </div>
+                          <div class="swiper-pagination item-catalog__pagination flat__pagination"></div>
+
+                        </div>
+                      <?php endif; ?>
+                      <div class="flat__more-info">
+                        <div class="flat__more-adress"><?php the_title(); ?></div>
+                        <div class="flat__more-price"><?php the_field('price'); ?> ₽ за сутки</div>
+                        <div class="item-catalog__desc">
+                          <span class="item-desc item-flat"><?php the_field('beds-number'); ?> кровати</span>
+                          <span class="item-desc item-beds"><?php the_field('flat-sq'); ?> м²</span>
+                          <span class="item-desc item-sq"><?php the_field('flat-floor'); ?> этаж</span>
+                        </div>
+                        <div class="flat__more-text">
+                          <?php the_field('description'); ?>
+                        </div>
+
+
+                        <?php if (get_field('link-bron')): ?>
+                          <a href="<?php the_field('link-bron') ?>" class="flat__more-btn btn">
+                            <span>Забронировать</span>
+                          </a>
+                        <?php else: ?>
+                          <button class="flat__more-btn btn">
+                            <span>Забронировать</span>
+                          </button>
+                        <?php endif; ?>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                <?php endforeach; ?>
+
+              </div>
+            </div>
+            <button type="button" class="flat-more__swiper-btn swiper-button-prev"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0314 9.21873H5.63613L9.77129 5.08357L8.6666 3.97888L2.64551 9.99998L8.6666 16.0211L9.77129 14.9164L5.63613 10.7812H17.0314V9.21873Z" fill="#116cf0" />
+              </svg></button>
+            <button type="button" class="flat-more__swiper-btn swiper-button-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.96856 9.21873H14.3639L10.2287 5.08357L11.3334 3.97888L17.3545 9.99998L11.3334 16.0211L10.2287 14.9164L14.3639 10.7812H2.96856V9.21873Z" fill="#116CF0" />
+              </svg></button>
+          <?php else: ?>
+            Нет связанных записей.
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+<?php get_footer(); ?>
