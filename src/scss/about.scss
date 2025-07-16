@@ -64,6 +64,7 @@
 
 .numbers {
   @include adaptiveValue("padding-top", 140, 80);
+  @include adaptiveValue("padding-bottom", 140, 80);
 
   /* .numbers__container */
   &__container {}
